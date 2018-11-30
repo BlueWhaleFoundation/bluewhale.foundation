@@ -1,0 +1,127 @@
+/* common */
+@charset "utf-8";
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+
+legend {
+  width: 100%;
+
+  /*
+    안해주면 아이폰에서 100%가 안됨. 약 50%만 됨.
+  */
+}
+
+input,
+button {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+
+body {
+  background-color: #fff;
+  color: #444;
+  font-family:
+    'Ubuntu',
+    sans-serif,
+    "Nanum Gothic",
+    sans-serif,
+    Helvetica,
+    'Apple SD Gothic Neo';
+  letter-spacing: -0.02em;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+#wrap {
+  width: 100%;
+}
