@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#454545;}
+	.st4{fill:none;stroke:#538AAB;stroke-width:1.5;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#BDBDBD;stroke-width:1.5;stroke-miterlimit:10;}
+	.st6{fill:#3148D2;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st8{fill:#003450;}
+	.st9{fill:none;stroke:#FF0000;stroke-width:6;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#FFFFFF;stroke-width:9;stroke-miterlimit:10;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#003450;}
+	.st12{clip-path:url(#SVGID_2_);}
+	.st13{clip-path:url(#SVGID_4_);fill:#1F5D7C;}
+	.st14{clip-path:url(#SVGID_6_);fill:none;stroke:#1F5D7C;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#1F5D7C;stroke-miterlimit:10;}
+	.st17{fill:#1F5D7C;}
+	.st18{fill:none;stroke:#BDBDBD;stroke-miterlimit:10;}
+	.st19{fill:none;stroke:#538AAB;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#444444;stroke-miterlimit:10;}
+	.st21{fill:none;}
+</style>
+<g id="bg" class="st0">
+	<g class="st1">
+		<circle cx="15" cy="-15" r="15"/>
+	</g>
+	<g class="st1">
+		<circle cx="15" cy="15" r="15"/>
+	</g>
+</g>
+<g id="레이어_1">
+	<g>
+		<g>
+			<path class="st8" d="M19.77,25.09h-9.01c-3.33,0-6.04-2.71-6.04-6.04v-9.01C4.72,6.71,7.43,4,10.76,4h9.01
+				c3.33,0,6.04,2.71,6.04,6.04v9.01C25.82,22.38,23.11,25.09,19.77,25.09z M10.76,5.84c-2.31,0-4.2,1.88-4.2,4.2v9.01
+				c0,2.31,1.88,4.2,4.2,4.2h9.01c2.31,0,4.2-1.88,4.2-4.2v-9.01c0-2.31-1.88-4.2-4.2-4.2H10.76z"/>
+		</g>
+		<g>
+			<path class="st8" d="M15.27,19.87c-2.94,0-5.32-2.39-5.32-5.32s2.39-5.32,5.32-5.32s5.32,2.39,5.32,5.32S18.21,19.87,15.27,19.87
+				z M15.27,11.06c-1.92,0-3.48,1.56-3.48,3.48s1.56,3.48,3.48,3.48s3.48-1.56,3.48-3.48S17.19,11.06,15.27,11.06z"/>
+		</g>
+		<circle class="st8" cx="20.64" cy="8.97" r="1.23"/>
+	</g>
+	<g>
+		<defs>
+			<polygon id="SVGID_1_" points="69,-1494.27 59,-1489.27 59,-1499.27 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st12">
+			<defs>
+				<rect id="SVGID_3_" x="-396" y="-1848.27" width="1024" height="3653"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_5_" x="-396" y="-1848.27" width="1024" height="3653"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+		</clipPath>
+	</g>
+</g>
+</svg>

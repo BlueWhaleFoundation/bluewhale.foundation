@@ -1,0 +1,160 @@
+/* common */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean");
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+
+legend {
+  width: 100%;
+}
+
+input,
+button {
+  outline: none;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+sup {
+  font-size: 10px;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800|Vollkorn:400,600");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn:400,700");
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #3a3a3a;
+  font-family: "Montserrat", sans-serif, "Noto Sans KR", sans-serif, Helvetica,
+    "Apple SD Gothic Neo";
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(245, 152, 164, 0.3);
+  opacity: 0.6;
+}
+
+::-moz-selection {
+  background: rgba(245, 152, 164, 0.3);
+  opacity: 0.6;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 100;
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-weight: 100;
+  color: #fff;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 100;
+  color: #fff;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+.bodyScroll {
+  overflow-y: hidden;
+}
