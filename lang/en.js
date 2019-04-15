@@ -21,9 +21,11 @@ export const en = {
 
   // section 03
   sec03_historyTit01: "Shareable Asset:",
-  sec03_historyTit01_1: "SEED SRF Energy Farm",
+  sec03_historyTit01_02: "SEED SRF Energy Farm",
   sec03_historyTxt01:
-    "The first case of Shareable Asset (S.A)One of the world’s first  blockchain-backed asset projects.The sustainable business showing stable growth regardless of economic cycles will continue to rise with product profitability and lack of supply relative to demand.",
+    "The first case of Shareable Asset(S.A) One of the world’s first blockchain-backed asset projects.",
+  sec03_historyTxt01_02:
+    "The sustainable business showing stable growth regardless of economic cycles will continue to rise with product profitability and lack of supply relative to demand.",
   sec03_historyTit02: "Innovation Hub",
   sec03_historyTxt02:
     "A platform connecting individual talents to create a community based on technology.Through connectivity, convergence  and network effects we help build local communities and reinvigorate  the economy for the betterment of  society.",
