@@ -303,7 +303,7 @@
           .history_list_m {
             .history_area {
               .history {
-                padding-top: 50px;
+                padding-top: 0;
                 // height: 1000px;
                 // padding-bottom: 100px;
 
@@ -504,8 +504,7 @@
             padding-bottom: 80px;
           
             .img_area {
-              height: 365px;
-              padding-top: 80px !important;
+              height: 80vh;
               background-image: url("img/ourvision-img-2.jpg");
               background-size: cover;
 
@@ -514,8 +513,7 @@
               }
 
               .bg {
-                padding-top: 80px;
-                height: 365px!important;
+                height: 80vh!important;
               }
             }
           }

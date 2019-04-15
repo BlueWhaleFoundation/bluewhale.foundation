@@ -72,14 +72,14 @@ $(window).scroll(function() {
   }
 
   // 모바일 히스토리 이미지 top
-  for (var i = 1; 4 > i; i++) {
-    var historyImgPadding =
-      $(`.history_list_m .history0${i} .history_txt_wrap`).height() + 40;
+  // for (var i = 1; 4 > i; i++) {
+  //   var historyImgPadding =
+  //     $(`.history_list_m .history0${i} .history_txt_wrap`).height() + 40;
 
-    $(`.history_list_m .history0${i} .history_img_wrap`).css({
-      top: historyImgPadding
-    });
-  }
+  //   $(`.history_list_m .history0${i} .history_img_wrap`).css({
+  //     top: historyImgPadding
+  //   });
+  // }
 
   var windowHalf = winHeight / 2;
 
