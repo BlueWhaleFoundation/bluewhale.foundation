@@ -28,10 +28,12 @@ export const en = {
     "The sustainable business showing stable growth regardless of economic cycles will continue to rise with product profitability and lack of supply relative to demand.",
   sec03_historyTit02: "Innovation Hub",
   sec03_historyTxt02:
-    "A platform connecting individual talents to create a community based on technology.Through connectivity, convergence  and network effects we help build local communities and reinvigorate  the economy for the betterment of  society.",
+    "A platform connecting individual talents to create a community based on technology.",
+  sec03_historyTxt02_02:
+    "Through connectivity, convergence  and network effects we help build local communities and reinvigorate  the economy for the betterment of society.",
   sec03_historyTit03: "Smart City Platform",
-  sec03_historyTxt03:
-    "Redefine the way we live, from ‘being  smart’ to ‘being wise’.",
+  sec03_historyTxt03: "Redefine the way we live,",
+  sec03_historyTxt03_02: "from ‘being  smart’ to ‘being wise’.",
 
   // section 4
 

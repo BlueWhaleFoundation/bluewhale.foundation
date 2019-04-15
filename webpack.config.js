@@ -5,7 +5,7 @@ const Dotenv = require("dotenv-webpack"); // dotenv work in webpack
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin"); // tsconfig.js 파일 설정
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./index.js",
   devtool: "eval",
   output: {
     filename: "bundle.js",
@@ -70,5 +70,5 @@ module.exports = {
       vue$: "vue/dist/vue.esm.js"
     }
   },
-  plugins: [new Dotenv()]
+
 };
