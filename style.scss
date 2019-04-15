@@ -764,6 +764,7 @@
 
               .history_img_wrap {
                 position: sticky;
+                position: -webkit-sticky;
                 top: 0;
                 width: 100%;
                 margin-top: 50px;
@@ -1172,6 +1173,7 @@
 
         .vision_img {
           position: sticky;
+          position: -webkit-sticky;
           left: 0;
           top: 0;
           width: 100%;
