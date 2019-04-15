@@ -184,9 +184,17 @@ $(function() {
   var visionImgH = $(".vision_img img").height();
   var winHeight = window.innerHeight; // 윈도우창 높이 가변
   var visionImgPadding = (winHeight - visionImgH) / 2;
+  var visionImgPaddingM = (winHeight - 364) / 2;
+  var windowWidth = $(window).width();
 
   $(".vision_img .bg").css({ height: visionImgH });
   $(".vision_img").css({ paddingTop: visionImgPadding });
+
+  if (windowWidth < 768){
+    $(".vision_img").css({ paddingTop: visionImgPaddingM });
+  }else {
+    $(".vision_img").css({ paddingTop: visionImgPadding });
+  }
 
   $(window).resize(function() {
     var visionImgH = $(".vision_img img").height();
@@ -194,7 +202,11 @@ $(function() {
     var visionImgPadding = (winHeight - visionImgH) / 2;
 
     $(".vision_img .bg").css({ height: visionImgH });
-    $(".vision_img").css({ paddingTop: visionImgPadding });
+    if (windowWidth < 768){
+      $(".vision_img").css({ paddingTop: visionImgPaddingM });
+    }else {
+      $(".vision_img").css({ paddingTop: visionImgPadding });
+    }
   });
 
 
@@ -211,16 +223,16 @@ $(function() {
 
   $(window).resize(function() {
     if (windowWidth < 768){
-      $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
-      $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
-      $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
+      $(".history_list_m .history01 .history_txt_wrap").css({paddingTop:text01padding});
+      $(".history_list_m .history02 .history_txt_wrap").css({paddingTop:text01padding});
+      $(".history_list_m .history03 .history_txt_wrap").css({paddingTop:text01padding});
     }
   });
 
   if (windowWidth < 768){
-    $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
-    $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
-    $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
+    $(".history_list_m .history01 .history_txt_wrap").css({paddingTop:text01padding});
+    $(".history_list_m .history02 .history_txt_wrap").css({paddingTop:text01padding});
+    $(".history_list_m .history03 .history_txt_wrap").css({paddingTop:text01padding});
   }
 
 
