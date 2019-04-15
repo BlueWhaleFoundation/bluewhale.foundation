@@ -5,9 +5,9 @@ $(window).scroll(function() {
   var winTop = $(window).scrollTop(); //스크롤의 현재 위치
   var whatwedo = winTop + 1000;
 
-  $(".sa_history h2").css({
-    transform: "translateX( -" + whatwedo / 3 + "px)"
-  });
+  // $(".sa_history h2").css({
+  //   transform: "translateX( -" + whatwedo / 3 + "px)"
+  // });
 });
 
 // 스크롤 이벤트
@@ -203,12 +203,25 @@ $(function() {
   var historyTxtH01 = $(".history_list_m .history01 .history_txt_wrap").height();
   var historyTxtH02 = $(".history_list_m .history02 .history_txt_wrap").height();
   var historyTxtH03 = $(".history_list_m .history03 .history_txt_wrap").height();
+  var windowWidth = $(window).width();
 
   var text01padding = (winHeight - historyTxtH01) / 2
   var text02padding = (winHeight - historyTxtH02) / 2
   var text03padding = (winHeight - historyTxtH03) / 2
 
-  $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
-  $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
-  $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
+  $(window).resize(function() {
+    if (windowWidth < 768){
+      $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
+      $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
+      $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
+    }
+  });
+
+  if (windowWidth < 768){
+    $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
+    $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
+    $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
+  }
+
+
 });

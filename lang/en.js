@@ -82,6 +82,9 @@ export const en = {
 
   // section 10
   sec10_tit: "Latest News",
+  sec10_news01:"Blue Whale Partnership with Incheon Free Economic Zone",
+  sec10_news02:"Blue Whale Business Agreement with Samsung",
+  sec10_news03:"Blue Whale's New Asset Sharing Blockchain Platform",
 
   // footer
   foot_bw: "Blue Whale Foundation",
