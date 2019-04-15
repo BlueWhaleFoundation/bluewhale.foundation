@@ -497,6 +497,9 @@
           //   }
           // }
           .vision_img {
+            position: sticky;
+            position: -webkit-sticky;
+            position: -ms-sticky;
             padding-top: 80px !important;
             padding-bottom: 80px;
           
