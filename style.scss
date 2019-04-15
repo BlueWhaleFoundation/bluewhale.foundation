@@ -773,7 +773,7 @@
 
                 .timeline {
                   width: 100%;
-                  font-size: 50px;
+                  font-size: 30px;
                   margin-bottom: 80px;
                   padding-bottom: 10px;
                   border-bottom: 1px solid #3a3a3a;
@@ -781,7 +781,7 @@
                   h3 {
                     font-size: 50px;
                     font-weight: 400;
-                    text-align: left;
+                    text-align: center;
                   }
                 }
 
@@ -1350,6 +1350,7 @@
                   width: 0;
                   height: inherit;
                   background-color: #979797;
+                  transform: -webkit-skew(20deg);
                   transform: skew(20deg);
                   transition: $hover-effect;
                   z-index: 0;
