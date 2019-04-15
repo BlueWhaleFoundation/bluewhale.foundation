@@ -20,8 +20,8 @@ export const en = {
     "By simplifying processes with an easy to  use, blockchain-based smart contract system for everything from administrative to actual transactions",
 
   // section 03
-  sec03_whatWedo: "What we do?",
-  sec03_historyTit01: "Shareable Asset:SEED SRF Energy Farm",
+  sec03_historyTit01: "Shareable Asset:",
+  sec03_historyTit01_1: "SEED SRF Energy Farm",
   sec03_historyTxt01:
     "The first case of Shareable Asset (S.A)One of the world’s first  blockchain-backed asset projects.The sustainable business showing stable growth regardless of economic cycles will continue to rise with product profitability and lack of supply relative to demand.",
   sec03_historyTit02: "Innovation Hub",

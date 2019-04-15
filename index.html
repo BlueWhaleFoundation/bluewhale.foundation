@@ -2,6 +2,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="dist/bundle.js"></script>
+    <script src="basic.js"></script>
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <meta charset="UTF-8" />
@@ -490,15 +491,12 @@
                     <div class="history_txt_area">
                       <div class="tit">
                         <h4>
-                          Shareable Asset:<br />
-                          SEED SRF Energy Farm
+                          <span>{{ $t("sec03_historyTit01") }}</span>
+                          <span>{{ $t("sec03_historyTit01_1") }}</span>
                         </h4>
                       </div>
                       <div class="txt">
-                        The first case of SA<br /><br />
-
-                        The test case: One of the world’s first<br />
-                        blockchain-backed asset projects.
+                        {{ $t("sec03_historyTxt01") }}
                       </div>
                     </div>
                   </div>
@@ -516,15 +514,11 @@
                     <div class="history_txt_area">
                       <div class="tit">
                         <h4>
-                          Innovation HUB
+                          {{ $t("sec03_historyTit02") }}
                         </h4>
                       </div>
                       <div class="txt">
-                        A platform that connects individual talents to create a
-                        society for people based on technology. We reinvigorate
-                        the local economy through connectivity, convergence and
-                        network effects for building communities and creating a
-                        better society.
+                        {{ $t("sec03_historyTxt02") }}
                       </div>
                     </div>
                   </div>
@@ -542,12 +536,11 @@
                     <div class="history_txt_area">
                       <div class="tit">
                         <h4>
-                          Smart City Platform
+                          {{ $t("sec03_historyTit03") }}
                         </h4>
                       </div>
                       <div class="txt">
-                        We are redefining the way of living. From “being smart”
-                        to “being wise"
+                        {{ $t("sec03_historyTxt03") }}
                       </div>
                     </div>
                   </div>
