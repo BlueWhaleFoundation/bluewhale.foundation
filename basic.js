@@ -40,7 +40,7 @@ $(window).scroll(function() {
     for (var j = 0; j < i; j++) {
       saKeyHSum = saKeyHSum + parseInt(saKeyH[j]);
     }
-    console.log(saKeyHSum, "saKeyHSum");
+
 
     if (winTop + 700 >= mainVisualH + saCubeH + saKeyHSum) {
       $(".sa_key_area li:nth-child(" + (i + 1) + ")").css(heightEffect);
@@ -152,12 +152,12 @@ $(function() {
   $(".ham_wrap").click(function() {
     $(".header_m .gnb_menu").toggleClass("gnb_slide");
     $("body").toggleClass("bodyScroll");
-    $(".ham_wrap .bar").toggleClass("ㄴ");
+    // $(".ham_wrap .bar").toggleClass("ㄴ");
     $(".ham_wrap .bar:eq(0)").toggleClass("bar_01");
     $(".ham_wrap .bar:eq(1)").toggleClass("bar_02");
     $(".ham_wrap .bar:eq(2)").toggleClass("bar_03");
   });
-  $(".header_m .gnb_menu a").click(function() {
+  $(".header_m .gnb_menu a, .header_m .gnb_menu button").click(function() {
     $(".header_m .gnb_menu").removeClass("gnb_slide");
     $("body").removeClass("bodyScroll");
     $(".ham_wrap .bar:eq(0)").removeClass("bar_01");
