@@ -91,5 +91,5 @@ export const en = {
   foot_businessNum: "830-86-00967",
   foot_ceo: "CEO",
   foot_ceoName: "Will Lee",
-  foot_address: "ADDRESS"
+  foot_address: "Address"
 };
