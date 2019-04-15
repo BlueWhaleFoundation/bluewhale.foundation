@@ -477,27 +477,45 @@
         }
 
         .bw_vision {
-          position: relative;
-          width: 100%;
-          height: auto;
-          margin-bottom: 100px;
+          // position: relative;
+          // width: 100%;
+          // height: auto;
+          // margin-bottom: 100px;
 
+          // .vision_img {
+          //   // position: static;
+          //   height: 365px;
+          //   background-position-x: 50%;
+
+          //   img {
+          //     width: 100%;
+          //   }
+
+          //   .bg {
+          //     height: 365px;
+          //     opacity: 1 !important;
+          //   }
+          // }
           .vision_img {
-            position: static;
-            height: 365px;
-            background-position-x: 50%;
-
-            img {
-              display: none;
-              width: 100%;
-            }
-
-            .bg {
+            padding-top: 80px !important;
+            padding-bottom: 80px;
+          
+            .img_area {
               height: 365px;
-              opacity: 1 !important;
+              padding-top: 80px !important;
+              background-image: url("img/ourvision-img-2.jpg");
+              background-size: cover;
+
+              img {
+                display: none;
+              }
+
+              .bg {
+                padding-top: 80px;
+                height: 365px!important;
+              }
             }
           }
-
           .txt_area {
             h2 {
               padding-bottom: 20px;

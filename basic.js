@@ -190,6 +190,11 @@ $(function() {
 
   $(window).resize(function() {
     var visionImgH = $(".vision_img img").height();
+    var winHeight = window.innerHeight; // 윈도우창 높이 가변
+    var visionImgPadding = (winHeight - visionImgH) / 2;
+
     $(".vision_img .bg").css({ height: visionImgH });
+    $(".vision_img").css({ paddingTop: visionImgPadding });
+    
   });
 });

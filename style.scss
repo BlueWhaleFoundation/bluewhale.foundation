@@ -144,6 +144,7 @@
         transition: $hover-effect;
 
         li {
+          overflow: hidden;
           a {
             width: 240px;
             height: 44px;
@@ -152,6 +153,22 @@
             font-size: 16px;
             color: #fff;
           }
+        }
+        .lang_m {
+          width: 240px;
+          margin: 0 auto;
+
+          p {
+            display: inline-block;
+            height: 44px;
+            line-height: 44px;
+
+            button {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+
         }
       }
 
