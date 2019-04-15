@@ -195,6 +195,20 @@ $(function() {
 
     $(".vision_img .bg").css({ height: visionImgH });
     $(".vision_img").css({ paddingTop: visionImgPadding });
-    
   });
+
+
+  // history 텍스트 패딩값
+  var winHeight = window.innerHeight; // 윈도우창 높이 가변
+  var historyTxtH01 = $(".history_list_m .history01 .history_txt_wrap").height();
+  var historyTxtH02 = $(".history_list_m .history02 .history_txt_wrap").height();
+  var historyTxtH03 = $(".history_list_m .history03 .history_txt_wrap").height();
+
+  var text01padding = (winHeight - historyTxtH01) / 2
+  var text02padding = (winHeight - historyTxtH02) / 2
+  var text03padding = (winHeight - historyTxtH03) / 2
+
+  $(".history_list_m .history01 .history_txt_wrap").css({"paddingTop":text01padding});
+  $(".history_list_m .history02 .history_txt_wrap").css({"paddingTop":text01padding});
+  $(".history_list_m .history03 .history_txt_wrap").css({"paddingTop":text01padding});
 });
