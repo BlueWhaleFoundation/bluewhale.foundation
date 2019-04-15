@@ -87,7 +87,7 @@ export const en = {
   sec10_news03:"Blue Whale's New Asset Sharing Blockchain Platform",
 
   // footer
-  foot_bw: "Blue Whale Foundation",
+  foot_bw: "Blue Whale",
   foot_corportae: "Corporate Registration Number",
   foot_corportaeNum: "201807205K",
   foot_business: "Business Registration Number",
