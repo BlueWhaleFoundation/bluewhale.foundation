@@ -198,7 +198,7 @@ $(function() {
   });
 
 
-  // history 텍스트 패딩값
+  // history 텍스트 패딩값 들어가라!
   var winHeight = window.innerHeight; // 윈도우창 높이 가변
   var historyTxtH01 = $(".history_list_m .history01 .history_txt_wrap").height();
   var historyTxtH02 = $(".history_list_m .history02 .history_txt_wrap").height();
