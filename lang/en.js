@@ -52,6 +52,7 @@ export const en = {
   sec5_send: "Send",
 
   // section 6
+  //
   sec6_txt01:
     "Our vision is to help people realise their potential and build a smart and sustainable world to live in.",
   sec6_txt02:
