@@ -53,11 +53,10 @@ export const en = {
 
   // section 6
   sec6_txt01:
-    "Our vision is to help people realise their potential and build a smart",
-  sec6_txt02: "and sustainable world to live in.",
-  sec6_txt03:
+    "Our vision is to help people realise their potential and build a smart and sustainable world to live in.",
+  sec6_txt02:
     "We are redefining the way of living from “being smart” to “being wise“.",
-  sec6_txt04:
+  sec6_txt03:
     "With smart infrastructures, enterprising societies and resourceful lifestyles.",
 
   // section 7
@@ -82,9 +81,9 @@ export const en = {
 
   // section 10
   sec10_tit: "Latest News",
-  sec10_news01:"Blue Whale Partnership with Incheon Free Economic Zone",
-  sec10_news02:"Blue Whale Business Agreement with Samsung",
-  sec10_news03:"Blue Whale's New Asset Sharing Blockchain Platform",
+  sec10_news01: "Blue Whale Partnership with Incheon Free Economic Zone",
+  sec10_news02: "Blue Whale Business Agreement with Samsung",
+  sec10_news03: "Blue Whale's New Asset Sharing Blockchain Platform",
 
   // footer
   foot_bw: "Blue Whale",
