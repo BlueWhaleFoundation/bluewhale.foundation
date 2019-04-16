@@ -468,14 +468,15 @@
       .sa_cube {
         display: flex;
         align-items: center;
+        box-sizing: border-box;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        padding: 90px 0 100px;
 
         .cube_area {
           width: $width;
           max-width: $max-width;
           margin: 0 auto;
-          padding-bottom: 100px;
           color: #fff;
 
           .cube_tit {
@@ -732,9 +733,7 @@
               // padding-bottom: 100px;
 
               &.history01 {
-
                 .history_img_wrap {
-
                   .history_img_area {
                     top: 300px !important;
                     margin-bottom: 450px;
@@ -742,9 +741,7 @@
                 }
               }
               &.history02 {
-
                 .history_img_wrap {
-
                   .history_img_area {
                     top: 250px !important;
                     margin-bottom: 350px;
@@ -752,9 +749,7 @@
                 }
               }
               &.history03 {
-
                 .history_img_wrap {
-
                   .history_img_area {
                     top: 300px !important;
                     margin-bottom: 450px;
@@ -1349,7 +1344,8 @@
                   top: 0;
                   width: 0;
                   height: inherit;
-                  background-color: #979797;
+                  background-color: red;
+                  border-radius: 32px;
                   transform: -webkit-skew(20deg);
                   transform: skew(20deg);
                   transition: $hover-effect;
