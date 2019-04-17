@@ -1195,6 +1195,28 @@
             }
           }
         }
+
+        .bw_alert {
+          position: relative;
+          margin-top: 10px;
+
+          .bw_success,
+          .bw_fail {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            transition: $hover-effect;
+          }
+
+          .bw_success {
+            color: $main-color;
+          }
+          .bw_fail {
+            color: red;
+            top: 30px;
+          }
+        }
       }
 
       .bw_vision {

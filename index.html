@@ -6,8 +6,27 @@
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script>
-      const popup = require ("sweetalert");
-      console.log(popup,"popup");
+      function subscribe(){
+        var bwEmail = $("#bw-email").val()
+        const data = [{ email : bwEmail }]
+        $.ajax({
+          type: 'POST',
+          url: 'https://api.sendgrid.com/v3/contactdb/recipients',
+          headers: {
+              'Authorization': 'Bearer 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',
+              'Content-Type': 'application/json'
+          },
+          data: JSON.stringify(data),
+          dataType: 'json',
+        }).done(function() {
+          $(".bw_success").css({"backgroundColor":"pink"});
+          $(".bw_fail").css({"backgroundColor":"#fff"});
+        })
+        .fail(function(e) {
+          $(".bw_success").css({"backgroundColor":"#fff"});
+          $(".bw_fail").css({"backgroundColor":"pink"});
+        });
+      }
     </script>
     <meta charset="UTF-8" />
     <meta
@@ -700,10 +719,16 @@
                 {{ $t("sec5_txt") }}
               </h3>
               <div class="input_area">
-                <input type="email" placeholder="Email address" />
-                <button>
-                  {{ $t("sec5_send") }}
-                </button>
+                <!-- <form method="POST"> -->
+                  <input id="bw-email" type="email" placeholder="Email address" required/>
+                  <button onclick="subscribe()">
+                    {{ $t("sec5_send") }}
+                  </button>
+                <!-- </form> -->
+              </div>
+              <div class="bw_alert">
+                <p class="bw_success">Thank you for Subscribing :)</p>
+                <p class="bw_fail">Sorry, one more time please</p>
               </div>
             </div>
           </section>
