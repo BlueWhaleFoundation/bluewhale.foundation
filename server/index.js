@@ -17,6 +17,7 @@ app.use(
 
 app.post('/subscribe', async function(req, res) {
   try {
+    console.log('구독 요청!')
     const result = await axios.post(SENDGRID_URL, req.body, {
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })

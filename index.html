@@ -11,7 +11,7 @@
         const data = [{ email : bwEmail }]
         $.ajax({
           type: 'POST',
-          crossOrigin: true,
+          crossDomain: true,
           url: 'https://email.bluewhale.foundation/subscribe',
           headers: {
               'Content-Type': 'application/json'
@@ -525,72 +525,75 @@
             <div class="history_wrap">
               <div class="history_list">
                 <div class="history history01">
-                  <div class="history_img_wrap">
-                    <div class="history_img_area">
-                      <div class="timeline">
-                        <h3>What we have done</h3>
-                      </div>
-                      <img src="img/history-01.png" />
-                    </div>
+                  <div class="timeline">
+                    <h3>What we have done</h3>
                   </div>
-                  <div class="history_txt_wrap">
-                    <div class="history_txt_area">
-                      <div class="tit">
-                        <h4>
-                          <span>{{ $t("sec03_historyTit01") }}</span
-                          ><br />
-                          <span>{{ $t("sec03_historyTit01_02") }}</span>
-                        </h4>
+                  <div class="history_contents">
+                    <div class="history_img_wrap">
+                      <div class="history_img_area">
+                        <img src="img/history_img01.png" />
                       </div>
-                      <div class="txt">
-                        <span>{{ $t("sec03_historyTxt01") }}</span><br/>
-                        <span>{{ $t("sec03_historyTxt01_02") }}</span>
+                    </div>
+                    <div class="history_txt_wrap">
+                      <div class="history_txt_area">
+                        <div class="tit">
+                          <h4>
+                            <span>{{ $t("sec03_historyTit01") }}</span
+                            ><br />
+                            <span>{{ $t("sec03_historyTit01_02") }}</span>
+                          </h4>
+                        </div>
+                        <div class="txt">
+                          <span>{{ $t("sec03_historyTxt01") }}</span><br/>
+                          <span>{{ $t("sec03_historyTxt01_02") }}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="history history02">
-                  <div class="history_img_wrap">
-                    <div class="history_img_area">
-                      <div class="timeline">
-                        <h3>Upcoming Project</h3>
-                      </div>
-                      <img src="img/history-03.png" />
-                    </div>
+                  <div class="timeline">
+                    <h3>Upcoming Project</h3>
                   </div>
-                  <div class="history_txt_wrap">
-                    <div class="history_txt_area">
-                      <div class="tit">
-                        <h4>
-                          {{ $t("sec03_historyTit02") }}
-                        </h4>
+                  <div class="history_contents">
+                    <div class="history_img_wrap">
+                      <div class="history_img_area">
+                        <img src="img/history_img02.png" />
                       </div>
-                      <div class="txt">
-                        {{ $t("sec03_historyTxt02") }}</br>
-                        {{ $t("sec03_historyTxt02_02") }}
+                    </div>
+                    <div class="history_txt_wrap">
+                      <div class="history_txt_area">
+                        <div class="tit">
+                          <h4>
+                            {{ $t("sec03_historyTit02") }}
+                          </h4>
+                        </div>
+                        <div class="txt">
+                          {{ $t("sec03_historyTxt02") }}</br>
+                          {{ $t("sec03_historyTxt02_02") }}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="history history03">
-                  <div class="history_img_wrap">
-                    <div class="history_img_area">
-                      <div class="timeline">
-                        <h3>Upcoming Project</h3>
+                  <div class="history_contents">
+                    <div class="history_img_wrap">
+                      <div class="history_img_area">
+                        <img src="img/history_img03.png" />
                       </div>
-                      <img src="img/history-03.png" />
                     </div>
-                  </div>
-                  <div class="history_txt_wrap">
-                    <div class="history_txt_area">
-                      <div class="tit">
-                        <h4>
-                          {{ $t("sec03_historyTit03") }}
-                        </h4>
-                      </div>
-                      <div class="txt">
-                        {{ $t("sec03_historyTxt03") }}<br/>
-                        {{ $t("sec03_historyTxt03_02") }}
+                    <div class="history_txt_wrap">
+                      <div class="history_txt_area">
+                        <div class="tit">
+                          <h4>
+                            {{ $t("sec03_historyTit03") }}
+                          </h4>
+                        </div>
+                        <div class="txt">
+                          {{ $t("sec03_historyTxt03") }}<br/>
+                          {{ $t("sec03_historyTxt03_02") }}
+                        </div>
                       </div>
                     </div>
                   </div>

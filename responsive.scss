@@ -1,4 +1,4 @@
-@import "global_variable.scss";
+@import 'global_variable.scss';
 
 @media all and (min-width: 320px) and (max-width: 767px) {
   #wrap {
@@ -301,6 +301,8 @@
             transform: translateX(0px) !important;
           }
           .history_list_m {
+            display: block;
+
             .history_area {
               .history {
                 padding-top: 0;
@@ -360,67 +362,6 @@
 
             .history_list {
               display: none;
-              width: $width;
-              margin: 0 auto;
-
-              .history {
-                display: flex;
-                position: relative;
-                width: 100%;
-                margin-bottom: 20vh;
-
-                &.history01 {
-                }
-
-                &:after {
-                  display: block;
-                  content: "";
-                  clear: both;
-                }
-
-                .history_img_wrap {
-                  width: 55%;
-                  height: inherit;
-                  padding-right: 5%;
-
-                  .history_img_area {
-                    position: sticky;
-                    top: 0;
-                    width: 100%;
-
-                    .timeline {
-                      margin-bottom: 30px;
-                      padding: 20px 0;
-                      font-size: 40px;
-                      border-bottom: 1px solid #3a3a3a;
-                    }
-
-                    img {
-                      width: 100%;
-                    }
-                  }
-                }
-
-                .history_txt_wrap {
-                  width: 40%;
-
-                  .history_txt_area {
-                    width: 100%;
-
-                    .tit {
-                      margin-bottom: 40px;
-                      padding-top: 100vh;
-                      font-size: 40px;
-                      text-align: left;
-                    }
-                    .txt {
-                      font-size: 30px;
-                      padding-bottom: 80vh;
-                      text-align: left;
-                    }
-                  }
-                }
-              }
             }
           }
         }
@@ -502,10 +443,10 @@
             position: -ms-sticky;
             // padding-top: 80px !important;
             padding-bottom: 80px;
-          
+
             .img_area {
               height: 364px;
-              background-image: url("img/ourvision-img-2.jpg");
+              background-image: url('img/ourvision-img-2.jpg');
               background-size: cover;
 
               img {
@@ -513,7 +454,7 @@
               }
 
               .bg {
-                height: 364px!important;
+                height: 364px !important;
               }
             }
           }
@@ -750,14 +691,14 @@
                     margin-bottom: 0;
                     a {
                       .news_bg {
-                        background-image: url("img/bwnews02.jpg");
+                        background-image: url('img/bwnews02.jpg');
                       }
                     }
                   }
                   &.news_03 {
                     a {
                       .news_bg {
-                        background-image: url("img/bwnews03.jpg");
+                        background-image: url('img/bwnews03.jpg');
                         background-position-y: 0px;
                       }
                     }
