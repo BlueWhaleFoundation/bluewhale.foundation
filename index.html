@@ -11,17 +11,21 @@
         const data = [{ email : bwEmail }]
         $.ajax({
           type: 'POST',
-          url: 'https://api.sendgrid.com/v3/contactdb/recipients',
+          url: 'https://email.bluewhale.foundation/subscribe',
           headers: {
-              'Authorization': 'Bearer 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',
               'Content-Type': 'application/json'
           },
           data: JSON.stringify(data),
           dataType: 'json',
-        }).done(function() {
+        })
+        .done(function(d){
+          console.log('success')
         })
         .fail(function(e) {
-        });
+          console.log('fail')
+          console.log(e)
+        })
+    
       }
     </script>
     <meta charset="UTF-8" />
