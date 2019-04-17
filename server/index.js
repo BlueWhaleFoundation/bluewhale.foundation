@@ -12,14 +12,13 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
+app.options('*', cors())
 
 app.post('/subscribe', async function(req, res) {
   try {
     const result = await axios.post(SENDGRID_URL, req.body, {
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
-
-    console.log(result)
 
     res.send({ result: 'sucess' })
   } catch (err) {
@@ -28,14 +27,11 @@ app.post('/subscribe', async function(req, res) {
 })
 
 app.delete('/subscribe', async function(req, res) {
-  console.log('hello')
   try {
     const result = await axios.delete(SENDGRID_URL, {
       data: req.body,
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
-
-    console.log(result)
 
     res.send({ result: 'sucess' })
   } catch (err) {
