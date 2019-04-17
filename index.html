@@ -11,6 +11,7 @@
         const data = [{ email : bwEmail }]
         $.ajax({
           type: 'POST',
+          crossOrigin: true,
           url: 'https://email.bluewhale.foundation/subscribe',
           headers: {
               'Content-Type': 'application/json'
