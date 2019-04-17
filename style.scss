@@ -1,4 +1,4 @@
-@import 'global_variable.scss';
+@import "global_variable.scss";
 
 #wrap {
   width: 100%;
@@ -430,7 +430,7 @@
           vertical-align: middle;
 
           h2 {
-            font-family: 'Vollkorn', serif;
+            font-family: "Vollkorn", serif;
             font-size: 100px;
           }
 
@@ -442,7 +442,7 @@
           }
 
           .kor_font {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: "Noto Sans KR", sans-serif;
           }
         }
       }
@@ -825,6 +825,7 @@
 
           .history_list {
             width: $width;
+            max-width: 1080px;
             margin: 0 auto;
 
             .history {
@@ -854,7 +855,7 @@
 
               &:after {
                 display: block;
-                content: '';
+                content: "";
                 clear: both;
               }
 
@@ -1394,7 +1395,7 @@
 
                 &:after {
                   display: block;
-                  content: '';
+                  content: "";
                   position: absolute;
                   left: -5%;
                   top: 0;
@@ -1588,7 +1589,7 @@
             top: 0;
             width: 100%;
             height: inherit;
-            background-image: url('img/bwnews01.jpg');
+            background-image: url("img/bwnews01.jpg");
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -1639,14 +1640,14 @@
             margin-bottom: 20px;
             a {
               .news_bg {
-                background-image: url('img/bwnews02.jpg');
+                background-image: url("img/bwnews02.jpg");
               }
             }
           }
           &.news_03 {
             a {
               .news_bg {
-                background-image: url('img/bwnews03.jpg');
+                background-image: url("img/bwnews03.jpg");
                 background-position-y: 0px;
               }
             }
@@ -1734,7 +1735,7 @@ $ani-delay: 1s;
 .arrow:before,
 .arrow:after {
   background: #fff;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   position: absolute;
