@@ -17,15 +17,14 @@
           },
           data: JSON.stringify(data),
           dataType: 'json',
-        })
-        .done(function(d){
-          console.log('success')
+        }).done(function() {
+          $(".bw_success").css({"backgroundColor":"pink"});
+          $(".bw_fail").css({"backgroundColor":"#fff"});
         })
         .fail(function(e) {
-          console.log('fail')
-          console.log(e)
-        })
-    
+          $(".bw_success").css({"backgroundColor":"#fff"});
+          $(".bw_fail").css({"backgroundColor":"pink"});
+        });
       }
     </script>
     <meta charset="UTF-8" />
@@ -719,10 +718,16 @@
                 {{ $t("sec5_txt") }}
               </h3>
               <div class="input_area">
-                <input id="bw-email" type="email" placeholder="Email address" />
-                <button onclick="subscribe()">
-                  {{ $t("sec5_send") }}
-                </button>
+                <!-- <form method="POST"> -->
+                  <input id="bw-email" type="email" placeholder="Email address" required/>
+                  <button onclick="subscribe()">
+                    {{ $t("sec5_send") }}
+                  </button>
+                <!-- </form> -->
+              </div>
+              <div class="bw_alert">
+                <p class="bw_success">Thank you for Subscribing :)</p>
+                <p class="bw_fail">Sorry, one more time please</p>
               </div>
             </div>
           </section>
