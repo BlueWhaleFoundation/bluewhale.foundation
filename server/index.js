@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors({ origin: ['*'], optionSuccessStatus: 200 }))
 
 app.post('/subscribe', async function(req, res) {
+  console.log('구독 요청!', req.body)
   try {
-    console.log('구독 요청!')
     const result = await axios.post(SENDGRID_URL, req.body, {
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
