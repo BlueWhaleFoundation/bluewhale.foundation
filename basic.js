@@ -156,6 +156,7 @@ $(window).scroll(function() {
 
 window.addEventListener("scroll", function() {
   var winHeight = window.innerHeight; // 윈도우창 높이 가변
+  var windowWidth = $(window).width(); // 윈도우창 넓이 (반응형)
 
   var currScrollPos2 =
     window.pageYOffset ||
@@ -169,12 +170,42 @@ window.addEventListener("scroll", function() {
     $(".sa_history").outerHeight() +
     $(".bw_dan_wrap").outerHeight() +
     $(".bw_newsletter").outerHeight();
+  var visionOpacitym =
+    $(".main_visual_m").outerHeight() +
+    $(".sa_wrap").outerHeight() +
+    $(".sa_history").outerHeight() +
+    $(".bw_dan_wrap").outerHeight() +
+    $(".bw_newsletter").outerHeight();
 
-  if (currScrollPos2 > visionOpacity) {
-    $(".bw_vision .bg").css({
-      opacity: (currScrollPos2 / visionOpacity + -1) * 30
-    });
+  if (windowWidth < 768) {
+    if (currScrollPos2 > visionOpacitym) {
+      $(".bw_vision .bg").css({
+        opacity: (currScrollPos2 / visionOpacity + -1) * 30
+      });
+    }
+  } else {
+    if (currScrollPos2 > visionOpacity) {
+      $(".bw_vision .bg").css({
+        opacity: (currScrollPos2 / visionOpacity + -1) * 30
+      });
+    }
   }
+
+  $(window).resize(function() {
+    if (windowWidth < 768) {
+      if (currScrollPos2 > visionOpacitym) {
+        $(".bw_vision .bg").css({
+          opacity: (currScrollPos2 / visionOpacity + -1) * 30
+        });
+      }
+    } else {
+      if (currScrollPos2 > visionOpacity) {
+        $(".bw_vision .bg").css({
+          opacity: (currScrollPos2 / visionOpacity + -1) * 30
+        });
+      }
+    }
+  });
 });
 
 $(function() {
