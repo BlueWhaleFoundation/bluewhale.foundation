@@ -6,18 +6,8 @@
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script>
-      function validateEmail(email) {
-        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-      }
-
       function subscribe(){
         var bwEmail = $("#bw-email").val()
-        if(!validateEmail(bwEmail)){
-          $(".bw_success").css({"opacity":"0"});
-          $(".bw_fail").css({"opacity":"1"});
-          return
-        }
 
         const data = [{ email : bwEmail }]
         $.ajax({
