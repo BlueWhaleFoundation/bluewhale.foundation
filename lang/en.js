@@ -56,7 +56,7 @@ export const en = {
   sec6_txt01:
     "Our vision is to help people realise their potential and build a smart and sustainable world to live in.",
   sec6_txt02:
-    "We are redefining the way of living from “being smart” to “being wise“.",
+    "We are redefining the way of living from “being smart” to “being wise”.",
   sec6_txt03:
     "With smart infrastructures, enterprising societies and resourceful lifestyles.",
 
