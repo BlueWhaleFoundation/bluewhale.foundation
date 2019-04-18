@@ -37,7 +37,6 @@ app.use(
  * [{'email': 'tester@naver.com'}]
  */
 app.post('/subscribe', async function(req, res) {
-  console.log('구독 요청!', req.body)
   try {
     const { email } = req.body[0]
 
@@ -55,6 +54,8 @@ app.post('/subscribe', async function(req, res) {
       `INSERT INTO subscribe (email, sendgrid_key) VALUES ('${email}', '${sendgrid_key}')`
     )
 
+    console.log(email, '회원을 성공적으로 구독 시켰습니다.')
+
     res.send({ result: 'success' })
   } catch (err) {
     console.log(err)
@@ -67,8 +68,6 @@ app.post('/subscribe', async function(req, res) {
  * [{'email': 'tester@naver.com'}]
  */
 app.delete('/subscribe', async function(req, res) {
-  console.log('구독 취소 요청!', req.body)
-
   try {
     const { email } = req.body[0]
 
@@ -80,12 +79,20 @@ app.delete('/subscribe', async function(req, res) {
       `SELECT sendgrid_key FROM subscribe WHERE email='${email}'`
     )
 
+    if (rows.length === 0) {
+      throw new Error('구독 회원이 아닙니다.')
+    }
+
     const { sendgrid_key } = JSON.parse(JSON.stringify(rows))[0]
 
     const result = await axios.delete(SENDGRID_URL, {
       data: [sendgrid_key],
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
+
+    await promisePool.query(`DELETE FROM subscribe WHERE email='${email}'`)
+
+    console.log(email, '회원을 성공적으로 구독 취소했습니다.')
 
     res.send({ result: 'sucess' })
   } catch (err) {
