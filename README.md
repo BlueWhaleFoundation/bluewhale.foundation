@@ -3,6 +3,7 @@
 관리자: 손태희, 강현석
 
 사용중인 API: Sendgrid
+
 데이터베이스: [mysql](https://github.com/BlueWhaleFoundation/bw-site-mysql)
 
 # 실행법
