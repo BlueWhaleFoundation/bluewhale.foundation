@@ -10,7 +10,8 @@ const SENDGRID_API_KEY =
 const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors({ origin: ['*'], optionSuccessStatus: 200 }))
 
 app.post('/subscribe', async function(req, res) {
   console.log('구독 요청!', req.body)
