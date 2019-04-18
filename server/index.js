@@ -3,6 +3,17 @@ const axios = require('axios')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
+const mysql = require('mysql2')
+
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '1q2w3e4r',
+  database: 'email',
+})
+
+const promisePool = pool.promise()
+
 const SENDGRID_URL = 'https://api.sendgrid.com/v3/contactdb/recipients'
 const SENDGRID_API_KEY =
   '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'
@@ -20,30 +31,58 @@ app.use(
   cors({ origin: ['https://bluewhale.foundation'], optionSuccessStatus: 200 })
 )
 
+/**
+ * request body example
+ * [{'email': 'tester@naver.com'}]
+ */
 app.post('/subscribe', async function(req, res) {
   console.log('구독 요청!', req.body)
   try {
-    if (!validateEmail(req.body[0].email)) {
+    const { email } = req.body[0]
+
+    if (!validateEmail(email)) {
       throw new Error('이메일 양식이 틀렸습니다')
     }
 
-    const result = await axios.post(SENDGRID_URL, req.body, {
+    const _result = await axios.post(SENDGRID_URL, req.body, {
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
 
-    res.send({ result: 'sucess' })
+    const sendgrid_key = _result.data.persisted_recipients[0]
+
+    await promisePool.query(
+      `INSERT INTO subscribe (email, sendgrid_key) VALUES ('${email}', '${sendgrid_key}')`
+    )
+
+    res.send({ result: 'success' })
   } catch (err) {
     console.log(err)
     res.sendStatus(400)
   }
 })
 
+/**
+ * request body example
+ * [{'email': 'tester@naver.com'}]
+ */
 app.delete('/subscribe', async function(req, res) {
   console.log('구독 취소 요청!', req.body)
 
   try {
+    const { email } = req.body[0]
+
+    if (!validateEmail(email)) {
+      throw new Error('이메일 양식이 틀렸습니다')
+    }
+
+    const [rows] = await promisePool.query(
+      `SELECT sendgrid_key FROM subscribe WHERE email='${email}'`
+    )
+
+    const { sendgrid_key } = JSON.parse(JSON.stringify(rows))[0]
+
     const result = await axios.delete(SENDGRID_URL, {
-      data: req.body,
+      data: [sendgrid_key],
       headers: { Authorization: 'Bearer ' + SENDGRID_API_KEY },
     })
 
