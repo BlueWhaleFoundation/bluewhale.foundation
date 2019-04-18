@@ -1,3 +1,15 @@
+# 프로젝트
+
+관리자: 손태희, 강현석
+
+사용중인 API: [Sendgrid](https://sendgrid.com/)
+
+데이터베이스: [MySQL](https://github.com/BlueWhaleFoundation/bw-site-mysql)
+
+웹페이지 도메인: https://bluewhale.foundation
+
+이메일 구독 서버 도메인: https://email.bluewhale.foundation
+
 # 실행법
 
 먼저 webpack watch 켜둔다.
