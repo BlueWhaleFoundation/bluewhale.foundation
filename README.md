@@ -1,3 +1,9 @@
+# 프로젝트
+
+관리자: 손태희, 강현석
+
+[이메일 서버](https://github.com/BlueWhaleFoundation/bw-site-email)
+
 # 실행법
 
 먼저 webpack watch 켜둔다.
