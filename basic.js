@@ -150,6 +150,10 @@ $(window).scroll(function() {
   if (winTop + 500 >= productOp3) {
     $(".product_talket").css({ opacity: "1" });
   }
+
+  if (windowWidth < 768) {
+    $(".product_talket, .product_sa, .product_spalsh").css({ opacity: "1" });
+  }
 });
 
 // 스크롤 opacity
