@@ -50,6 +50,8 @@ export const en = {
 
   sec5_txt: "Are you interested in the Shareable Asset (S.A) project",
   sec5_send: "Send",
+  sec5_success: "Thank you for subscribing!",
+  sec5_fail: "Please enter a valid address again.",
 
   // section 6
   //

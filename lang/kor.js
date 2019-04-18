@@ -48,6 +48,8 @@ export const kor = {
 
   sec5_txt: "셰어러블 에셋 (S.A)의 소식을 가장 먼저 받아보세요.",
   sec5_send: "구독하기",
+  sec5_success: "구독해 주셔서 감사합니다.",
+  sec5_fail: "이메일 주소를 다시 한번 입력해 주세요.",
 
   // section 6
   //
