@@ -15,10 +15,12 @@ $(window).scroll(function() {
   var winTop = $(window).scrollTop(); // 스크롤 현재 위치
   var docHeight = $(document).height(); // 문서 높이 고정
   var winHeight = window.innerHeight; // 윈도우창 높이 가변
+  var windowWidth = $(window).width(); // 윈도우창 넓이 (반응형)
 
   var winBottom = winTop + winHeight; // 스크롤 bottom
 
   var mainVisualH = $(".main_visual").outerHeight();
+  var mainVisualHm = $(".main_visual_m").outerHeight();
   var saCubeH = $(".sa_cube").outerHeight();
   var saKeyH = $(".sa_key").outerHeight();
   var listhistory01 = $(".history_list .history01").outerHeight();
@@ -63,10 +65,18 @@ $(window).scroll(function() {
       saKeyHSum = saKeyHSum + parseInt(saKeyH[j]);
     }
 
-    if (winTop + 700 >= mainVisualH + saCubeH + saKeyHSum) {
-      $(".sa_key_area li:nth-child(" + (i + 1) + ")").css(heightEffect);
-      $(".sa_key_area li:nth-child(" + (i + 1) + ") h3").css(heightEffect);
-      $(".sa_key_area li:nth-child(" + (i + 1) + ") p").css(heightEffect);
+    if (windowWidth < 768) {
+      if (winTop + 700 >= mainVisualHm + saCubeH + saKeyHSum) {
+        $(".sa_key_area li:nth-child(" + (i + 1) + ")").css(heightEffect);
+        $(".sa_key_area li:nth-child(" + (i + 1) + ") h3").css(heightEffect);
+        $(".sa_key_area li:nth-child(" + (i + 1) + ") p").css(heightEffect);
+      }
+    } else {
+      if (winTop + 700 >= mainVisualH + saCubeH + saKeyHSum) {
+        $(".sa_key_area li:nth-child(" + (i + 1) + ")").css(heightEffect);
+        $(".sa_key_area li:nth-child(" + (i + 1) + ") h3").css(heightEffect);
+        $(".sa_key_area li:nth-child(" + (i + 1) + ") p").css(heightEffect);
+      }
     }
   }
 

@@ -1,8 +1,9 @@
-@import 'global_variable.scss';
+@import "global_variable.scss";
 
 @media all and (min-width: 320px) and (max-width: 767px) {
   #wrap {
     #header {
+      position: static;
       height: 48px;
       background-color: #000;
 
@@ -131,34 +132,40 @@
     #container_wrap {
       // main_visual area
       .main_visual {
-        height: 228px;
+        display: none;
+      }
+
+      .main_visual_m {
+        display: block;
+        position: relative;
 
         .main_video {
-          position: absolute;
-          left: 0;
-          height: 0;
           width: 100%;
-          height: inherit;
 
           video {
-            position: static;
-            top: 0%;
-            left: 0%;
-            min-width: 100%;
-            min-height: inherit;
-            width: auto;
-            height: auto;
-            z-index: -100;
+            width: 100%;
             transform: translate(0);
           }
         }
 
         .main_txt_table {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.4);
+          color: #fff;
+
           .main_txt_cell {
-            display: table-cell;
-            width: 100%;
-            padding-top: 48px;
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            width: 90%;
             vertical-align: middle;
+            transform: translateY(-50%);
 
             h2 {
               font-size: 30px;
@@ -173,7 +180,7 @@
 
       // bw_container area
       .bw_container {
-        margin-top: 228px;
+        margin-top: 0;
 
         .sa_wrap {
           height: auto;
@@ -446,7 +453,7 @@
 
             .img_area {
               height: 364px;
-              background-image: url('img/ourvision-img-2.jpg');
+              background-image: url("img/ourvision-img-2.jpg");
               background-size: cover;
 
               img {
@@ -691,14 +698,14 @@
                     margin-bottom: 0;
                     a {
                       .news_bg {
-                        background-image: url('img/bwnews02.jpg');
+                        background-image: url("img/bwnews02.jpg");
                       }
                     }
                   }
                   &.news_03 {
                     a {
                       .news_bg {
-                        background-image: url('img/bwnews03.jpg');
+                        background-image: url("img/bwnews03.jpg");
                         background-position-y: 0px;
                       }
                     }

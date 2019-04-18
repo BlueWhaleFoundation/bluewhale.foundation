@@ -176,6 +176,27 @@
         </div>
         <!-- bw_container -->
         <div class="bw_container">
+          <div class="main_visual_m">
+            <!-- <div class="bg"></div> -->
+            <div class="main_video">
+              <video playsinline autoplay muted loop>
+                <source
+                  src="http://d2xu590ijr3gd2.cloudfront.net/bw_video.mov"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="main_txt_table">
+              <div class="main_txt_cell">
+                <h2>
+                  {{ $t("sec01_tit") }}
+                </h2>
+                <h3>
+                  {{ $t("sec01_subtit") }}
+                </h3>
+              </div>
+            </div>
+          </div>
           <div class="sa_wrap">
             <section class="sa_cube">
               <div class="cube_area">
@@ -265,11 +286,13 @@
                 <script>
                   $(window).scroll(function() {
                     var winTop = $(window).scrollTop(); // 스크롤 현재 위치
-                    var mainVisualH = $(".main_visual").outerHeight();
                     var windowWidth = $(window).width();
+                    var mainVisualH = $(".main_visual").outerHeight();
+                    var mainVisualHm = $(".main_visual_m").outerHeight();
 
-                    if (winTop + 50 >= mainVisualH) {
-                      if (windowWidth < 768) {
+                    
+                    if (windowWidth < 768) {
+                      if (winTop + 50 >= mainVisualHm) {
                         $(".cubes_01").css({ left: "25%", top: "30%" });
                         $(".cubes_02").css({ left: "50%", top: "36%" });
                         $(".cubes_03").css({ left: "69%", top: "38%" }); //
@@ -298,10 +321,9 @@
                           fontSize: "14px"
                         });
                       }
-                    }
-                    
-                    if (winTop + 250 >= mainVisualH) {
-                      if (windowWidth > 767) {
+                      
+                    } else {
+                      if (winTop + 250 >= mainVisualH) {
                         $(".cubes_wrap").css({
                           width: "300px",
                           height: "300px"
@@ -335,12 +357,12 @@
                         });
                       }
                     }
+                    
 
                     $(window).resize(function() {
                       var windowWidth = $(window).width();
-
-                      if (winTop + 50 >= mainVisualH) {
-                        if (windowWidth < 768) {
+                      if (windowWidth < 768) {
+                        if (winTop + 50 >= mainVisualHm) {
                           $(".cubes_01").css({ left: "25%", top: "30%" });
                           $(".cubes_02").css({ left: "50%", top: "36%" });
                           $(".cubes_03").css({ left: "69%", top: "38%" }); //
@@ -368,11 +390,9 @@
                             top: "auto",
                             fontSize: "14px"
                           });
-                        }
-                    }
-                    
-                      if (winTop + 250 >= mainVisualH) {
-                        if (windowWidth > 767) {
+                        } 
+                      } else {
+                        if (winTop + 250 >= mainVisualH) {
                           $(".cubes_wrap").css({
                             width: "300px",
                             height: "300px"
@@ -406,6 +426,7 @@
                           });
                         }
                       }
+                      
                     });
                   });
                 </script>
