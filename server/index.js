@@ -11,7 +11,9 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors({ origin: ['*'], optionSuccessStatus: 200 }))
+app.use(
+  cors({ origin: ['https://bluewhale.foundation'], optionSuccessStatus: 200 })
+)
 
 app.post('/subscribe', async function(req, res) {
   console.log('구독 요청!', req.body)
