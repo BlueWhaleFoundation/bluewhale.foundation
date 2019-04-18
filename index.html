@@ -19,12 +19,12 @@
           data: JSON.stringify(data),
           dataType: 'json',
         }).done(function() {
-          $(".bw_success").css({"backgroundColor":"pink"});
-          $(".bw_fail").css({"backgroundColor":"#fff"});
+          $(".bw_success").css({"opacity":"1"});
+          $(".bw_fail").css({"opacity":"0"});
         })
         .fail(function(e) {
-          $(".bw_success").css({"backgroundColor":"#fff"});
-          $(".bw_fail").css({"backgroundColor":"pink"});
+          $(".bw_success").css({"opacity":"0"});
+          $(".bw_fail").css({"opacity":"1"});
         });
       }
     </script>
