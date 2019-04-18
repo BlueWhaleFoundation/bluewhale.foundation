@@ -25,6 +25,7 @@ function validateEmail(email) {
 
 const app = express()
 
+app.use('/img', express.static('img'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(
