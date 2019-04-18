@@ -184,7 +184,7 @@ window.addEventListener("scroll", function() {
   if (windowWidth < 768) {
     if (currScrollPos2 > visionOpacitym) {
       $(".bw_vision .bg").css({
-        opacity: (currScrollPos2 / visionOpacity + -1) * 30
+        opacity: (currScrollPos2 / visionOpacitym + -1) * 30
       });
     }
   } else {
