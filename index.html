@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="dist/bundle.js"></script>
@@ -6,28 +7,29 @@
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script>
-      function subscribe(){
-        var bwEmail = $("#bw-email").val()
+      function subscribe() {
+        var bwEmail = $("#bw-email").val();
 
-        const data = [{ email : bwEmail }]
+        const data = [{ email: bwEmail }];
         $.ajax({
-          type: 'POST',
+          type: "POST",
           crossDomain: true,
-          url: 'https://email.bluewhale.foundation/subscribe',
+          url: "https://email.bluewhale.foundation/subscribe",
           headers: {
-              'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           },
           data: JSON.stringify(data),
-          dataType: 'json',
-        }).done(function(e) {
-          console.log(e)
-          $(".bw_success").css({"opacity":"1"});
-          $(".bw_fail").css({"opacity":"0"});
+          dataType: "json"
         })
-        .fail(function(e) {
-          $(".bw_success").css({"opacity":"0"});
-          $(".bw_fail").css({"opacity":"1"});
-        });
+          .done(function(e) {
+            console.log(e);
+            $(".bw_success").css({ opacity: "1" });
+            $(".bw_fail").css({ opacity: "0" });
+          })
+          .fail(function(e) {
+            $(".bw_success").css({ opacity: "0" });
+            $(".bw_fail").css({ opacity: "1" });
+          });
       }
     </script>
     <meta charset="UTF-8" />
@@ -47,7 +49,45 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
     />
     <link rel="shortcut icon" href="img/favicon.ico" />
-
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2580677762158888");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=2580677762158888&ev=PageView&noscript=1
+  https://www.facebook.com/tr?id=2580677762158888&ev=PageView&noscript=1
+  "
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <title>
       Blue Whale | From skills to property, rediscover undervalued assets and
       maximize untapped potential.
@@ -59,7 +99,10 @@
       <header id="header" class="header">
         <div class="header_area">
           <h1>
-            <img src="https://email.bluewhale.foundation/img/bw-logo-w.png" alt="Blue Whale" />
+            <img
+              src="https://email.bluewhale.foundation/img/bw-logo-w.png"
+              alt="Blue Whale"
+            />
           </h1>
           <div class="gnb">
             <ul class="gnb_menu">
@@ -99,7 +142,7 @@
             </div>
           </div>
         </div>
-        <ul class="header_m">
+        <div class="header_m">
           <div class="logo">
             <img src="https://email.bluewhale.foundation/img/bw-logo-m.png" />
           </div>
@@ -149,7 +192,7 @@
               </div>
             </li>
           </ul>
-        </ul>
+        </div>
       </header>
       <!-- container area -->
       <div id="container_wrap">
@@ -212,8 +255,11 @@
                 <div class="cube_wrap">
                   <div class="cube_single">
                     <p class="cube_img">
-                      <img src="https://email.bluewhale.foundation/img/cube-single.svg" alt="cube" />
-                    </p> 
+                      <img
+                        src="https://email.bluewhale.foundation/img/cube-single.svg"
+                        alt="cube"
+                      />
+                    </p>
                     <h4 class="cube_txt">
                       Ownership
                     </h4>
@@ -225,52 +271,72 @@
                   <div class="cubes_wrap">
                     <div class="cubes cubes_01">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-01.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-01.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_02">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-02.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-02.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_03">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-03.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-03.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_04">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-04.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-04.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_05">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-05.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-05.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_06">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-06.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-06.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_07">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-07.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-07.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_08">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-08.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-08.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_09">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-09.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-09.png"
+                        />
                       </p>
                     </div>
                     <div class="cubes cubes_10">
                       <p>
-                        <img src="https://email.bluewhale.foundation/img/cube-10.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/cube-10.png"
+                        />
                       </p>
                     </div>
                     <p class="cubes_possession">
@@ -291,7 +357,6 @@
                     var mainVisualH = $(".main_visual").outerHeight();
                     var mainVisualHm = $(".main_visual_m").outerHeight();
 
-                    
                     if (windowWidth < 768) {
                       if (winTop + 50 >= mainVisualHm) {
                         $(".cubes_01").css({ left: "25%", top: "30%" });
@@ -322,7 +387,6 @@
                           fontSize: "14px"
                         });
                       }
-                      
                     } else {
                       if (winTop + 250 >= mainVisualH) {
                         $(".cubes_wrap").css({
@@ -358,7 +422,6 @@
                         });
                       }
                     }
-                    
 
                     $(window).resize(function() {
                       var windowWidth = $(window).width();
@@ -391,7 +454,7 @@
                             top: "auto",
                             fontSize: "14px"
                           });
-                        } 
+                        }
                       } else {
                         if (winTop + 250 >= mainVisualH) {
                           $(".cubes_wrap").css({
@@ -427,7 +490,6 @@
                           });
                         }
                       }
-                      
                     });
                   });
                 </script>
@@ -474,23 +536,26 @@
                         ><br />
                         <span>{{ $t("sec03_historyTit01_02") }}</span>
                       </h4>
-                      <span>{{ $t("sec03_historyTxt01") }}</span><br/>
-                        <span>{{ $t("sec03_historyTxt01_02") }}</span>
+                      <span>{{ $t("sec03_historyTxt01") }}</span
+                      ><br />
+                      <span>{{ $t("sec03_historyTxt01_02") }}</span>
                     </div>
                   </div>
                   <div class="history_img_wrap">
                     <div class="history_img_area">
                       <div class="history_img">
                         <p class="img">
-                          <img src="https://email.bluewhale.foundation/img/history-01.png" />
+                          <img
+                            src="https://email.bluewhale.foundation/img/history-01.png"
+                          />
                         </p>
                         <!-- <p class="bg"></p>
-                        <div class="history_tit">
-                          <h4>
-                            Shareable Asset:<br />
-                            SEED SRF Energy Farm
-                          </h4>
-                        </div> -->
+                      <div class="history_tit">
+                        <h4>
+                          Shareable Asset:<br />
+                          SEED SRF Energy Farm
+                        </h4>
+                      </div> -->
                       </div>
                     </div>
                   </div>
@@ -505,7 +570,7 @@
                     <div class="history_txt">
                       <h4>{{ $t("sec03_historyTit02") }}</h4>
 
-                      {{ $t("sec03_historyTxt02") }}<br/>
+                      {{ $t("sec03_historyTxt02") }}<br />
                       {{ $t("sec03_historyTxt02_02") }}
                     </div>
                   </div>
@@ -513,7 +578,9 @@
                     <div class="history_img_area">
                       <div class="history_img">
                         <p class="img">
-                          <img src="https://email.bluewhale.foundation/img/history-02.png" />
+                          <img
+                            src="https://email.bluewhale.foundation/img/history-02.png"
+                          />
                         </p>
                       </div>
                     </div>
@@ -524,12 +591,12 @@
                 <div class="history history03">
                   <div class="history_txt_wrap">
                     <!-- <div class="timeline" style="opacity:0;">
-                      <h3>Upcoming Project</h3>
-                    </div> -->
+                    <h3>Upcoming Project</h3>
+                  </div> -->
                     <div class="history_txt">
                       <h4>{{ $t("sec03_historyTit03") }}</h4>
 
-                      {{ $t("sec03_historyTxt03") }}<br/>
+                      {{ $t("sec03_historyTxt03") }}<br />
                       {{ $t("sec03_historyTxt03_02") }}
                     </div>
                   </div>
@@ -537,7 +604,9 @@
                     <div class="history_img_area">
                       <div class="history_img">
                         <p class="img">
-                          <img src="https://email.bluewhale.foundation/img/history-03.png" />
+                          <img
+                            src="https://email.bluewhale.foundation/img/history-03.png"
+                          />
                         </p>
                       </div>
                     </div>
@@ -554,7 +623,9 @@
                   <div class="history_contents">
                     <div class="history_img_wrap">
                       <div class="history_img_area">
-                        <img src="https://email.bluewhale.foundation/img/history_img01.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/history_img01.png"
+                        />
                       </div>
                     </div>
                     <div class="history_txt_wrap">
@@ -567,7 +638,8 @@
                           </h4>
                         </div>
                         <div class="txt">
-                          <span>{{ $t("sec03_historyTxt01") }}</span><br/>
+                          <span>{{ $t("sec03_historyTxt01") }}</span
+                          ><br />
                           <span>{{ $t("sec03_historyTxt01_02") }}</span>
                         </div>
                       </div>
@@ -581,7 +653,9 @@
                   <div class="history_contents">
                     <div class="history_img_wrap">
                       <div class="history_img_area">
-                        <img src="https://email.bluewhale.foundation/img/history_img02.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/history_img02.png"
+                        />
                       </div>
                     </div>
                     <div class="history_txt_wrap">
@@ -592,7 +666,7 @@
                           </h4>
                         </div>
                         <div class="txt">
-                          {{ $t("sec03_historyTxt02") }}</br>
+                          {{ $t("sec03_historyTxt02") }}<br />
                           {{ $t("sec03_historyTxt02_02") }}
                         </div>
                       </div>
@@ -603,7 +677,9 @@
                   <div class="history_contents">
                     <div class="history_img_wrap">
                       <div class="history_img_area">
-                        <img src="https://email.bluewhale.foundation/img/history_img03.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/history_img03.png"
+                        />
                       </div>
                     </div>
                     <div class="history_txt_wrap">
@@ -614,7 +690,7 @@
                           </h4>
                         </div>
                         <div class="txt">
-                          {{ $t("sec03_historyTxt03") }}<br/>
+                          {{ $t("sec03_historyTxt03") }}<br />
                           {{ $t("sec03_historyTxt03_02") }}
                         </div>
                       </div>
@@ -630,11 +706,16 @@
             </h2>
             <div class="bw_dan">
               <h3>
-                <img src="https://email.bluewhale.foundation/img/sa-logo.svg" alt="Shareable asset" />
+                <img
+                  src="https://email.bluewhale.foundation/img/sa-logo.svg"
+                  alt="Shareable asset"
+                />
               </h3>
               <div class="dan_icon dan_icon01">
                 <p class="img_area">
-                  <img src="https://email.bluewhale.foundation/img/icon-dan-01.svg" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/icon-dan-01.svg"
+                  />
                 </p>
                 <h4>
                   {{ $t("sec4_icon01") }}
@@ -642,7 +723,9 @@
               </div>
               <div class="dan_icon dan_icon02">
                 <p class="img_area">
-                  <img src="https://email.bluewhale.foundation/img/icon-dan-02.svg" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/icon-dan-02.svg"
+                  />
                 </p>
                 <h4>
                   {{ $t("sec4_icon02") }}
@@ -650,7 +733,9 @@
               </div>
               <div class="dan_icon dan_icon03">
                 <p class="img_area">
-                  <img src="https://email.bluewhale.foundation/img/icon-dan-03.svg" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/icon-dan-03.svg"
+                  />
                 </p>
                 <h4>
                   {{ $t("sec4_icon03") }}
@@ -658,7 +743,9 @@
               </div>
               <div class="dan_icon dan_icon04">
                 <p class="img_area">
-                  <img src="https://email.bluewhale.foundation/img/icon-dan-04.svg" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/icon-dan-04.svg"
+                  />
                 </p>
                 <h4>
                   {{ $t("sec4_icon04") }}
@@ -666,7 +753,9 @@
               </div>
               <div class="dan_icon dan_icon05">
                 <p class="img_area">
-                  <img src="https://email.bluewhale.foundation/img/icon-dan-05.svg" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/icon-dan-05.svg"
+                  />
                 </p>
                 <h4>
                   {{ $t("sec4_icon05") }}
@@ -681,7 +770,10 @@
             <div class="bw_dan_m">
               <div class="logo">
                 <h3>
-                  <img src="https://email.bluewhale.foundation/img/sa-logo-vertical.png" alt="Shareable asset" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/sa-logo-vertical.png"
+                    alt="Shareable asset"
+                  />
                 </h3>
               </div>
               <div class="bar_wrap">
@@ -698,7 +790,9 @@
                     {{ $t("sec4_icon01") }}
                   </h4>
                   <p class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/icon-dan-01.svg" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon-dan-01.svg"
+                    />
                   </p>
                 </div>
                 <div class="dan_icon dan_icon02">
@@ -706,7 +800,9 @@
                     {{ $t("sec4_icon02") }}
                   </h4>
                   <p class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/icon-dan-02.svg" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon-dan-02.svg"
+                    />
                   </p>
                 </div>
                 <div class="dan_icon dan_icon03">
@@ -714,7 +810,9 @@
                     {{ $t("sec4_icon03") }}
                   </h4>
                   <p class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/icon-dan-03.svg" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon-dan-03.svg"
+                    />
                   </p>
                 </div>
                 <div class="dan_icon dan_icon04">
@@ -722,7 +820,9 @@
                     {{ $t("sec4_icon04") }}
                   </h4>
                   <p class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/icon-dan-04.svg" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon-dan-04.svg"
+                    />
                   </p>
                 </div>
                 <div class="dan_icon dan_icon05">
@@ -730,7 +830,9 @@
                     {{ $t("sec4_icon05") }}
                   </h4>
                   <p class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/icon-dan-05.svg" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon-dan-05.svg"
+                    />
                   </p>
                 </div>
               </div>
@@ -738,7 +840,10 @@
           </section>
           <section id="bw_newsletter" class="bw_newsletter">
             <h2>
-              <img src="https://email.bluewhale.foundation/img/bw-logo-c.png" alt="blue whale" />
+              <img
+                src="https://email.bluewhale.foundation/img/bw-logo-c.png"
+                alt="blue whale"
+              />
             </h2>
             <div class="newsletter_input">
               <h3>
@@ -746,10 +851,15 @@
               </h3>
               <div class="input_area">
                 <!-- <form method="POST"> -->
-                  <input id="bw-email" type="email" placeholder="Email address" required/>
-                  <button onclick="subscribe()">
-                    {{ $t("sec5_send") }}
-                  </button>
+                <input
+                  id="bw-email"
+                  type="email"
+                  placeholder="Email address"
+                  required
+                />
+                <button onclick="subscribe()">
+                  {{ $t("sec5_send") }}
+                </button>
                 <!-- </form> -->
               </div>
               <div class="bw_alert">
@@ -761,7 +871,10 @@
           <div class="bw_vision">
             <div class="vision_img">
               <div class="img_area">
-                <img src="https://email.bluewhale.foundation/img/ourvision-img-2.jpg" alt="vision img" />
+                <img
+                  src="https://email.bluewhale.foundation/img/ourvision-img-2.jpg"
+                  alt="vision img"
+                />
                 <p class="bg"></p>
               </div>
             </div>
@@ -775,8 +888,7 @@
                 ><br />
                 <span>{{ $t("sec6_txt02") }}</span
                 ><br />
-                <span>{{ $t("sec6_txt03") }}</span
-                >
+                <span>{{ $t("sec6_txt03") }}</span>
               </p>
             </div>
           </div>
@@ -804,7 +916,10 @@
                     </div>
                   </div>
                   <div class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/project-sa.png" alt="project SA" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/project-sa.png"
+                      alt="project SA"
+                    />
                   </div>
                   <div class="more_btn_m">
                     <a href="https://shareableasset.com/" target="_blank">
@@ -830,31 +945,42 @@
                         href="https://itunes.apple.com/kr/app/splash/id1445373484?mt=8/?"
                         target="_blank"
                       >
-                        <img src="https://email.bluewhale.foundation/img/app-store-img.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/app-store-img.png"
+                        />
                       </a>
                       <a
                         href="https://play.google.com/store/apps/details?id=com.splashx.app"
                         target="_blank"
                       >
-                        <img src="https://email.bluewhale.foundation/img/google-play-img.png" />
+                        <img
+                          src="https://email.bluewhale.foundation/img/google-play-img.png"
+                        />
                       </a>
                     </div>
                   </div>
                   <div class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/project-splash.png" alt="project Splash" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/project-splash.png"
+                      alt="project Splash"
+                    />
                   </div>
                   <div class="splash_more_btn_m">
                     <a
                       href="https://itunes.apple.com/kr/app/splash/id1445373484?mt=8/?"
                       target="_blank"
                     >
-                      <img src="https://email.bluewhale.foundation/img/app-store-img.png" />
+                      <img
+                        src="https://email.bluewhale.foundation/img/app-store-img.png"
+                      />
                     </a>
                     <a
                       href="https://play.google.com/store/apps/details?id=com.splashx.app"
                       target="_blank"
                     >
-                      <img src="https://email.bluewhale.foundation/img/google-play-img.png" />
+                      <img
+                        src="https://email.bluewhale.foundation/img/google-play-img.png"
+                      />
                     </a>
                   </div>
                 </div>
@@ -880,7 +1006,10 @@
                     </div>
                   </div>
                   <div class="img_area">
-                    <img src="https://email.bluewhale.foundation/img/project-talket.png" alt="project talket" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/project-talket.png"
+                      alt="project talket"
+                    />
                   </div>
                   <div class="more_btn_m">
                     <a href="https://tal-ket.com/" target="_blank">
@@ -897,7 +1026,10 @@
             <h2>{{ $t("sec8_tit") }}</h2>
             <div class="ceo">
               <p class="img_area">
-                <img src="https://email.bluewhale.foundation/img/ceo.png" alt="ceo" />
+                <img
+                  src="https://email.bluewhale.foundation/img/ceo.png"
+                  alt="ceo"
+                />
               </p>
               <div class="txt_area">
                 <p>
@@ -919,25 +1051,37 @@
               <li class="partner">
                 <h3 class="blind">ifez 인천경제자유구역</h3>
                 <p class="partners_img">
-                  <img src="https://email.bluewhale.foundation/img/partners-ifez.png" alt="ifez" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/partners-ifez.png"
+                    alt="ifez"
+                  />
                 </p>
               </li>
               <li class="partner">
                 <h3 class="blind">SAMSUNG</h3>
                 <p class="partners_img">
-                  <img src="https://email.bluewhale.foundation/img/partners-samsung.png" alt="삼성" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/partners-samsung.png"
+                    alt="삼성"
+                  />
                 </p>
               </li>
               <li class="partner">
                 <h3 class="blind">Rotary</h3>
                 <p class="partners_img">
-                  <img src="https://email.bluewhale.foundation/img/partners-designhouse.png" alt="rotary" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/partners-designhouse.png"
+                    alt="rotary"
+                  />
                 </p>
               </li>
               <li class="partner">
                 <h3 class="blind">icon</h3>
                 <p class="partners_img">
-                  <img src="https://email.bluewhale.foundation/img/partners-icon.png" alt="icon" />
+                  <img
+                    src="https://email.bluewhale.foundation/img/partners-icon.png"
+                    alt="icon"
+                  />
                 </p>
               </li>
             </ul>
@@ -954,7 +1098,7 @@
                     <p class="news_bg"></p>
                     <p class="news_opacity"></p>
                     <h4 class="news_tit">
-                        {{ $t("sec10_news01") }}
+                      {{ $t("sec10_news01") }}
                     </h4>
                   </a>
                 </div>
@@ -998,8 +1142,14 @@
                     title="kr_facebook"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_white.svg" alt="facebook" />
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg" alt="facebook" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_white.svg"
+                      alt="facebook"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg"
+                      alt="facebook"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1008,8 +1158,14 @@
                     title="kr_instagram"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_insta_white.svg" alt="insta" />
-                    <img src="https://email.bluewhale.foundation/img/icon_insta_blue.svg" alt="insta" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_insta_white.svg"
+                      alt="insta"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_insta_blue.svg"
+                      alt="insta"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1018,8 +1174,14 @@
                     title="kr_twitter"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_white.svg" alt="twitter" />
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg" alt="twitter" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_white.svg"
+                      alt="twitter"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg"
+                      alt="twitter"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1028,8 +1190,14 @@
                     title="kr_youtube"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_white.svg" alt="youtube" />
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg" alt="youtube" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_white.svg"
+                      alt="youtube"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg"
+                      alt="youtube"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1038,8 +1206,14 @@
                     title="kr_blog"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_blog_white.svg" alt="blog" />
-                    <img src="https://email.bluewhale.foundation/img/icon_blog_blue.svg" alt="blog" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_blog_white.svg"
+                      alt="blog"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_blog_blue.svg"
+                      alt="blog"
+                    />
                   </a>
                 </li>
               </ul>
@@ -1053,8 +1227,14 @@
                     title="gl_telegram"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_telegram_white.svg" alt="telegram" />
-                    <img src="https://email.bluewhale.foundation/img/icon_telegram_blue.svg" alt="telegram" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_telegram_white.svg"
+                      alt="telegram"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_telegram_blue.svg"
+                      alt="telegram"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1063,8 +1243,14 @@
                     title="gl_facebook"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_white.svg" alt="facebook" />
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg" alt="facebook" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_white.svg"
+                      alt="facebook"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg"
+                      alt="facebook"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1073,8 +1259,14 @@
                     title="gl_twitter"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_white.svg" alt="twitter" />
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg" alt="twitter" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_white.svg"
+                      alt="twitter"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg"
+                      alt="twitter"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1083,8 +1275,14 @@
                     title="gl_youtube"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_white.svg" alt="youtube" />
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg" alt="youtube" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_white.svg"
+                      alt="youtube"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg"
+                      alt="youtube"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1093,8 +1291,14 @@
                     title="gl_reddit"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_reddit_white.svg" alt="reddit" />
-                    <img src="https://email.bluewhale.foundation/img/icon_reddit_blue.svg" alt="reddit" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_reddit_white.svg"
+                      alt="reddit"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_reddit_blue.svg"
+                      alt="reddit"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1103,8 +1307,14 @@
                     title="gl_midium"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_medium_white.svg" alt="medium" />
-                    <img src="https://email.bluewhale.foundation/img/icon_medium_blue.svg" alt="medium" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_medium_white.svg"
+                      alt="medium"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_medium_blue.svg"
+                      alt="medium"
+                    />
                   </a>
                 </li>
               </ul>
@@ -1114,12 +1324,15 @@
       </div>
 
       <!-- footer area -->
-      <footer id="footer">
+      <div id="footer">
         <div class="footer_area">
           <div class="footer_info">
             <div class="footer_logo">
               <a href="#none" title="BW logo">
-                <img src="https://email.bluewhale.foundation/img/bw_logo_simple.png" alt="BW logo" />
+                <img
+                  src="https://email.bluewhale.foundation/img/bw_logo_simple.png"
+                  alt="BW logo"
+                />
               </a>
             </div>
             <h2>
@@ -1170,8 +1383,14 @@
                     title="gl_telegram"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_telegram_white.svg" alt="telegram" />
-                    <img src="https://email.bluewhale.foundation/img/icon_telegram_blue.svg" alt="telegram" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_telegram_white.svg"
+                      alt="telegram"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_telegram_blue.svg"
+                      alt="telegram"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1180,8 +1399,14 @@
                     title="gl_facebook"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_white.svg" alt="facebook" />
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg" alt="facebook" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_white.svg"
+                      alt="facebook"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg"
+                      alt="facebook"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1190,8 +1415,14 @@
                     title="gl_twitter"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_white.svg" alt="twitter" />
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg" alt="twitter" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_white.svg"
+                      alt="twitter"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg"
+                      alt="twitter"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1200,8 +1431,14 @@
                     title="gl_youtube"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_white.svg" alt="youtube" />
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg" alt="youtube" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_white.svg"
+                      alt="youtube"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg"
+                      alt="youtube"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1210,8 +1447,14 @@
                     title="gl_reddit"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_reddit_white.svg" alt="reddit" />
-                    <img src="https://email.bluewhale.foundation/img/icon_reddit_blue.svg" alt="reddit" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_reddit_white.svg"
+                      alt="reddit"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_reddit_blue.svg"
+                      alt="reddit"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1220,8 +1463,14 @@
                     title="gl_midium"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_medium_white.svg" alt="medium" />
-                    <img src="https://email.bluewhale.foundation/img/icon_medium_blue.svg" alt="medium" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_medium_white.svg"
+                      alt="medium"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_medium_blue.svg"
+                      alt="medium"
+                    />
                   </a>
                 </li>
               </ul>
@@ -1235,8 +1484,14 @@
                     title="kr_facebook"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_white.svg" alt="facebook" />
-                    <img src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg" alt="facebook" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_white.svg"
+                      alt="facebook"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_facebook_blue.svg"
+                      alt="facebook"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1245,8 +1500,14 @@
                     title="kr_instagram"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_insta_white.svg" alt="insta" />
-                    <img src="https://email.bluewhale.foundation/img/icon_insta_blue.svg" alt="insta" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_insta_white.svg"
+                      alt="insta"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_insta_blue.svg"
+                      alt="insta"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1255,8 +1516,14 @@
                     title="kr_twitter"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_white.svg" alt="twitter" />
-                    <img src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg" alt="twitter" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_white.svg"
+                      alt="twitter"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_twitter_blue.svg"
+                      alt="twitter"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1265,8 +1532,14 @@
                     title="kr_youtube"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_white.svg" alt="youtube" />
-                    <img src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg" alt="youtube" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_white.svg"
+                      alt="youtube"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_youtube_blue.svg"
+                      alt="youtube"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1275,15 +1548,21 @@
                     title="kr_blog"
                     target="_blank"
                   >
-                    <img src="https://email.bluewhale.foundation/img/icon_blog_white.svg" alt="blog" />
-                    <img src="https://email.bluewhale.foundation/img/icon_blog_blue.svg" alt="blog" />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_blog_white.svg"
+                      alt="blog"
+                    />
+                    <img
+                      src="https://email.bluewhale.foundation/img/icon_blog_blue.svg"
+                      alt="blog"
+                    />
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   </body>
 
