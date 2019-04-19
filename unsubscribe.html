@@ -1,5 +1,35 @@
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      function unsubscribe() {
+        var bwEmail = $('#bw-email-unsubscribe').val()
+
+        console.log(bwEmail)
+
+        const data = [{ email: bwEmail }]
+        $.ajax({
+          type: 'DELETE',
+          crossDomain: true,
+          url: 'https://email.bluewhale.foundation/subscribe',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          data: JSON.stringify(data),
+          dataType: 'json',
+        })
+          .done(function(e) {
+            console.log(e)
+            $('.bw_success').css({ opacity: '1' })
+            $('.bw_fail').css({ opacity: '0' })
+          })
+          .fail(function(e) {
+            console.log(e)
+            $('.bw_success').css({ opacity: '0' })
+            $('.bw_fail').css({ opacity: '1' })
+          })
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -41,7 +71,7 @@
             <p class="unsubscribe_success">구독 취소 되셨습니다.</p>
           </div>
           <p class="button_box">
-            <button>
+            <button onclick="unsubscribe()">
               구독 취소
             </button>
           </p>
