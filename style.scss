@@ -142,6 +142,7 @@
         height: 0;
         background-color: #000;
         transition: $hover-effect;
+        z-index: 100;
 
         li {
           overflow: hidden;
@@ -1130,22 +1131,18 @@
 
               @keyframes border-dance {
                 0% {
-                  background-position: 0px 0px, 300px 116px, 0px 150px,
-                    216px 0px;
+                  background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
                 }
                 100% {
-                  background-position: 300px 0px, 0px 116px, 0px 0px,
-                    216px 150px;
+                  background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
                 }
               }
               @keyframes border-dance-r {
                 0% {
-                  background-position: 300px 0px, 0px 116px, 0px 0px,
-                    216px 150px;
+                  background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
                 }
                 100% {
-                  background-position: 0px 0px, 300px 116px, 0px 150px,
-                    216px 0px;
+                  background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
                 }
               }
             }
