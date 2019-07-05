@@ -10,8 +10,7 @@ export const en = {
     "Ownership can now be simplified into three immutable block representations of separate rights:",
   sec02_sa_provides: "What Shareable Asset (S.A) provides",
   sec02_sa_flexibility: "Flexibility",
-  sec02_sa_flexibilityTxt:
-    "By embracing all asset owners and their demands wherever they are",
+  sec02_sa_flexibilityTxt: "By embracing all asset owners and their demands wherever they are",
   sec02_sa_transparency: "Transparency",
   sec02_sa_transparencyTxt:
     "By providing a secure platform through  KYC & AML with full transparency on all  transactions via blockchain",
@@ -57,10 +56,8 @@ export const en = {
   //
   sec6_txt01:
     "Our vision is to help people realise their potential and build a smart and sustainable world to live in.",
-  sec6_txt02:
-    "We are redefining the way of living from “being smart” to “being wise”.",
-  sec6_txt03:
-    "With smart infrastructures, enterprising societies and resourceful lifestyles.",
+  sec6_txt02: "We are redefining the way of living from “being smart” to “being wise”.",
+  sec6_txt03: "With smart infrastructures, enterprising societies and resourceful lifestyles.",
 
   // section 7
   // produc†
@@ -70,11 +67,12 @@ export const en = {
     "Supporting individuals and companies for payroll and payment functions through personal digital wallet.",
   sec7_talket:
     "Empowering the talent trading community with a decentralized worker-centric ecosystem where independent workers can derive value from their passions in the gig economy.",
+  sec7_ez:
+    "EZ Reward is an exclusive game evaluation application for Samsung Galaxy devices, which allows users to earn token rewards via various participatory activities, including: game downloads, play time, recommendations and reviews.",
 
   // section 8
   sec8_tit: "CEO’s Message",
-  sec8_txt01:
-    "The core essence of Blue Whale reflects the karma rooted in the sharing economy:",
+  sec8_txt01: "The core essence of Blue Whale reflects the karma rooted in the sharing economy:",
   sec8_txt02: "‘To help others is to help yourself’.",
   sec8_txt03:
     "Such value proposition creates futuristic value, re-defining how mankind can live better and happier than before. This idea and belief brought each of our team members with diverse backgrounds across the world together forming the heart of Blue Whale.",
@@ -84,6 +82,8 @@ export const en = {
 
   // section 10
   sec10_tit: "Latest News",
+  sec10_news_rotary: "Building BWN: Blue Whale X Rotary International",
+  sec10_news_ez: "Product Update: Launch of App, EZ Reward",
   sec10_news01: "Blue Whale Partnership with Incheon Free Economic Zone",
   sec10_news02: "Blue Whale Business Agreement with Samsung",
   sec10_news03: "Blue Whale's New Asset Sharing Blockchain Platform",
