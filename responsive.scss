@@ -6,6 +6,10 @@ $large-device: "(min-width: 769px) and (max-width: 1024px)";
 $medium-device: "(min-width: 481px) and (max-width: 768px)";
 $small-device: "(max-width: 480px)";
 
+body {
+  overflow-x: hidden;
+}
+
 @media #{$hover-device} {
   #wrap {
     // news_wrap
