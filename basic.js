@@ -1,9 +1,4 @@
 //////////////////// ver 4.0 ///////////////////////
-$(function() {
-  $(".close").click(function() {
-    $(".popup").css({ display: "none" });
-  });
-});
 
 // 스크롤 텍스트
 $(window).scroll(function() {

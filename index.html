@@ -134,10 +134,15 @@
       .popup .img_area img {
         width: 100%;
       }
-
-
-
     </style>
+    <script>
+      $(function() {
+        $(".close").click(function() {
+          $(".popup").css({ display: "none" });
+        });
+      });
+
+    </script>
     <title>
       Blue Whale | From skills to property, rediscover undervalued assets and
       maximize untapped potential.
