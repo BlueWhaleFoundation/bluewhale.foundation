@@ -131,14 +131,35 @@
         width: 100%;
         max-width: 1200px;
       }
-      .popup .img_area img {
+
+      .popup_img_ko,
+      .popup_img_en {
+        display: block;
         width: 100%;
+      }
+
+      .popup_img_ko {
+        display: none;
       }
     </style>
     <script>
       $(function() {
         $(".close").click(function() {
           $(".popup").css({ display: "none" });
+        });
+
+        $(".lang_kor").click(function(){
+          $(".popup").css({ display: "block" });
+
+          $(".popup_img_en").css({"display":"none"});
+          $(".popup_img_ko").css({"display":"block"});
+        });
+
+        $(".lang_eng").click(function(){
+          $(".popup").css({ display: "block" });
+
+          $(".popup_img_en").css({"display":"block"});
+          $(".popup_img_ko").css({"display":"none"});
         });
       });
 
@@ -157,7 +178,8 @@
           </p>
           <div class='img_area'>
             <a href='https://okex.co.kr/' target="_blank">
-              <img src='img/OKEx_Korea_upload.png'>
+              <img class='popup_img_en' src='img/OKEx_Korea_upload_en.png'>
+              <img class='popup_img_ko' src='img/OKEx_Korea_upload.png'>
             </a>
           </div>
         </div>
