@@ -1,4 +1,9 @@
 //////////////////// ver 4.0 ///////////////////////
+$(function() {
+  $(".close").click(function() {
+    $(".popup").css({ display: "none" });
+  });
+});
 
 // 스크롤 텍스트
 $(window).scroll(function() {
@@ -44,10 +49,7 @@ $(window).scroll(function() {
     $(".history_list .history02 .history_img_wrap").css(heightEffect);
     $(".history_list .history02 .history_txt_wrap").css(heightEffect);
   }
-  if (
-    winTop + 600 >
-    mainVisualH + saCubeH + saKeyH + listhistory01 + listhistory02
-  ) {
+  if (winTop + 600 > mainVisualH + saCubeH + saKeyH + listhistory01 + listhistory02) {
     $(".history_list .history03 .history_img_wrap").css(heightEffect);
     $(".history_list .history03 .history_txt_wrap").css(heightEffect);
   }
@@ -104,8 +106,7 @@ $(window).scroll(function() {
 
   // 모바일 히스토리 이미지 top
   for (var i = 1; 4 > i; i++) {
-    var historyImgPadding =
-      $(`.history_list_m .history0${i} .history_txt_wrap`).height() + 40;
+    var historyImgPadding = $(`.history_list_m .history0${i} .history_txt_wrap`).height() + 40;
 
     $(`.history_list_m .history0${i} .history_img_wrap`).css({
       top: historyImgPadding
@@ -163,10 +164,7 @@ window.addEventListener("scroll", function() {
   var windowWidth = $(window).width(); // 윈도우창 넓이 (반응형)
 
   var currScrollPos2 =
-    window.pageYOffset ||
-    document.documentElement.scrollTop ||
-    document.body.scrollTop ||
-    0;
+    window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
   var visionOpacity =
     $(".main_visual").outerHeight() +
@@ -277,15 +275,9 @@ $(function() {
 
   // history 텍스트 패딩값 들어가라!
   var winHeight = window.innerHeight; // 윈도우창 높이 가변
-  var historyTxtH01 = $(
-    ".history_list_m .history01 .history_txt_wrap"
-  ).height();
-  var historyTxtH02 = $(
-    ".history_list_m .history02 .history_txt_wrap"
-  ).height();
-  var historyTxtH03 = $(
-    ".history_list_m .history03 .history_txt_wrap"
-  ).height();
+  var historyTxtH01 = $(".history_list_m .history01 .history_txt_wrap").height();
+  var historyTxtH02 = $(".history_list_m .history02 .history_txt_wrap").height();
+  var historyTxtH03 = $(".history_list_m .history03 .history_txt_wrap").height();
   var windowWidth = $(window).width();
 
   var text01padding = (winHeight - historyTxtH01) / 2;
