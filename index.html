@@ -145,6 +145,12 @@
       #wrap .news_wrap .news_area .news_list:first-child .news {
         width: calc((100% - 60px) / 3)!important;
       }
+
+      @media (max-width: 1024px) and (min-width: 769px) {
+        #wrap .news_wrap .news_area .news_list:first-child .news { 
+          width: calc((100% - 30px) / 3)!important;
+        }
+      }
     </style>
     <script>
       $(function() {
