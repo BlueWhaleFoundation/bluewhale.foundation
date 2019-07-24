@@ -82,6 +82,7 @@ export const en = {
 
   // section 10
   sec10_tit: "Latest News",
+  sec10_news_okex: "BWX Token Listing: OKEx",
   sec10_news_rotary: "Building BWN: Blue Whale X Rotary International",
   sec10_news_ez: "Product Update: Launch of App, EZ Reward",
   sec10_news01: "Blue Whale Partnership with Incheon Free Economic Zone",
