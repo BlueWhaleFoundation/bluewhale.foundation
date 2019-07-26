@@ -1,5 +1,8 @@
 //////////////////// ver 4.0 ///////////////////////
 
+// 테스트 용 로그
+console.log('test js')
+
 // 스크롤 텍스트
 $(window).scroll(function() {
   var winTop = $(window).scrollTop(); //스크롤의 현재 위치
