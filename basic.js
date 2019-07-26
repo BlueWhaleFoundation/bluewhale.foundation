@@ -1,8 +1,5 @@
 //////////////////// ver 4.0 ///////////////////////
 
-// 테스트 용 로그
-console.log('test js')
-
 // 스크롤 텍스트
 $(window).scroll(function() {
   var winTop = $(window).scrollTop(); //스크롤의 현재 위치
@@ -209,6 +206,12 @@ window.addEventListener("scroll", function() {
 });
 
 $(function() {
+  // 테스트 용 로그
+  $(".close").click(function() {
+    // $(".popup").css({ display: "none" });
+    console.log('close click')
+  });
+
   // 모바일 gnb 클릭이벤트
 
   $(".ham_wrap").click(function() {
