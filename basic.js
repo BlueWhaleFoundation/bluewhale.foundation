@@ -226,6 +226,7 @@ $(function() {
     $(".popup_img_ko").css({"display":"none"});
 
     $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
+  });
 
   // 모바일 gnb 클릭이벤트
 
