@@ -206,11 +206,26 @@ window.addEventListener("scroll", function() {
 });
 
 $(function() {
-  // 테스트 용 로그
   $(".close").click(function() {
-    // $(".popup").css({ display: "none" });
-    console.log('close click')
+    $(".popup").css({ display: "none" });
   });
+
+  $(".lang_kor").click(function(){
+    $(".popup").css({ display: "block" });
+
+    $(".popup_img_en").css({"display":"none"});
+    $(".popup_img_ko").css({"display":"block"});
+
+    $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
+  });
+
+  $(".lang_eng").click(function(){
+    $(".popup").css({ display: "block" });
+
+    $(".popup_img_en").css({"display":"block"});
+    $(".popup_img_ko").css({"display":"none"});
+
+    $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
 
   // 모바일 gnb 클릭이벤트
 
