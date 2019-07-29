@@ -103,10 +103,27 @@
     </noscript>
     <!-- End Facebook Pixel Code -->
     <style>
+      body {
+        overflow-y: hidden;
+      }
+
+      .popup_bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .4);
+        z-index: 999;
+      }
+
       .popup {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        max-width: 720px;
+        transform: translate(-50%, -50%);
         z-index: 1000;
       }
 
@@ -159,12 +176,14 @@
     </style>
     <script>
       $(function() {
-        $(".close").click(function() {
-          $(".popup").css({ display: "none" });
+        $(".close, .popup_bg").click(function() {
+          $(".popup, .popup_bg").css({ display: "none" });
+          $("body").css({"overflow-y":"scroll"});
         });
 
         $(".lang_kor").click(function(){
-          $(".popup").css({ display: "block" });
+          $(".popup, .popup_bg").css({ display: "block" });
+          $("body").css({"overflow-y":"hidden"});
 
           $(".popup_img_en").css({"display":"none"});
           $(".popup_img_ko").css({"display":"block"});
@@ -173,13 +192,31 @@
         });
 
         $(".lang_eng").click(function(){
-          $(".popup").css({ display: "block" });
+          $(".popup, .popup_bg").css({ display: "block" });
+          $("body").css({"overflow-y":"hidden"});
 
           $(".popup_img_en").css({"display":"block"});
           $(".popup_img_ko").css({"display":"none"});
 
           $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
         });
+
+        $(window).resize(function(){
+          var windowWidth = $( window ).width();
+
+          if(windowWidth < 789) {
+            $(".popup").css({"top":"0", "left":"0", "transform":"translate(0,0)"});
+          } else {
+            $(".popup").css({"top":"50%", "left":"50%", "transform":"translate(-50%,-50%)"});
+          }
+        });
+
+        var windowWidth = $( window ).width();
+        if(windowWidth < 789) {
+          $(".popup").css({"top":"0", "left":"0", "transform":"translate(0,0)"});
+        } else {
+          $(".popup").css({"top":"50%", "left":"50%", "transform":"translate(-50%,-50%)"});
+        }
       });
 
     </script>
@@ -190,6 +227,7 @@
   </head>
   <body>
     <div id="wrap">
+      <p class='popup_bg'></p>
       <div class='popup'>
         <div class="popup_area">  
           <p class='close'>
