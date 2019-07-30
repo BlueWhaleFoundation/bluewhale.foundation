@@ -161,6 +161,20 @@
         display: none;
       }
 
+      #wrap #container_wrap .bw_container .bw_partners .partners_list li {
+        width: calc(100% / 3)!important;
+        max-width: calc(100% / 3)!important;
+      }
+
+      .partners_img {
+        max-width: 238px;
+        margin: 0 auto;
+      }
+
+      #wrap #container_wrap .bw_container .bw_partners .partners_list:last-child {
+        justify-content: center;
+      }
+
       #wrap .news_wrap .news_area .news_list:first-child .news {
         width: calc((100% - 60px) / 3)!important;
       }
@@ -1219,19 +1233,6 @@
                 </a>
               </li>
               <li class="partner">
-                <a href='http://designhouse.co.kr/' target="_blank">
-                  <h3 class="blind">designhouse</h3>
-                  <p class="partners_img">
-                    <img
-                    src="https://bluewhale.foundation/img/partners-designhouse.png"
-                    alt="rotary"
-                    />
-                  </p>
-                </a>
-              </li>
-            </ul>
-            <ul class="partners_list">
-              <li class="partner">
                 <a href='https://www.rotary.org/ko' target="_blank">
                   <h3 class="blind">Rotary</h3>
                   <p class="partners_img">
@@ -1242,6 +1243,8 @@
                   </p>
                 </a>
               </li>
+            </ul>
+            <ul class="partners_list">
               <li class="partner">
                 <a href='https://www.kbfg.com/'>
                   <h3 class="blind">KB</h3>
