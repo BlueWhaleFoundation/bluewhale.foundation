@@ -1,4 +1,5 @@
 //////////////////// ver 4.0 ///////////////////////
+console.log('basic start')
 
 // 스크롤 텍스트
 $(window).scroll(function() {
