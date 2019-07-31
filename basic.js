@@ -206,6 +206,7 @@ window.addEventListener("scroll", function() {
 });
 
 $(function() {
+  console.log('jquery start')
   // $(".close").click(function() {
   //   $(".popup").css({ display: "none" });
   // });
