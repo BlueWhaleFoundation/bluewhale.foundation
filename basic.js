@@ -259,7 +259,8 @@ $(function() {
   // 메뉴 클릭시 부드럽게.
   $(".gnb_menu li a").click(function() {
     console.log('gnb_menu li a click function')
-    var gnb_menu = $($(this).attr("data-target")).offset().top;
+//    var gnb_menu = $($(this).attr("data-target")).offset().top;
+    var gnb_menu = $($(this).attr("data-target")).offset();
 
     $("html, body").animate({ scrollTop: gnb_menu }, 2050);
   });
