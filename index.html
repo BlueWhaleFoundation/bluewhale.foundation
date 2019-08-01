@@ -197,30 +197,30 @@
     </style>
     <script>
       $(function() {
-        $(".close, .popup_bg").click(function() {
-          $(".popup, .popup_bg").css({ display: "none" });
-          $("body").css({"overflow-y":"scroll"});
-        });
+        // $(".close, .popup_bg").click(function() {
+        //   $(".popup, .popup_bg").css({ display: "none" });
+        //   $("body").css({"overflow-y":"scroll"});
+        // });
 
-        $(".lang_kor").click(function(){
-          $(".popup, .popup_bg").css({ display: "block" });
-          $("body").css({"overflow-y":"hidden"});
+        // $(".lang_kor").click(function(){
+        //   $(".popup, .popup_bg").css({ display: "block" });
+        //   $("body").css({"overflow-y":"hidden"});
 
-          $(".popup_img_en").css({"display":"none"});
-          $(".popup_img_ko").css({"display":"block"});
+        //   $(".popup_img_en").css({"display":"none"});
+        //   $(".popup_img_ko").css({"display":"block"});
 
-          $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
-        });
+        //   $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
+        // });
 
-        $(".lang_eng").click(function(){
-          $(".popup, .popup_bg").css({ display: "block" });
-          $("body").css({"overflow-y":"hidden"});
+        // $(".lang_eng").click(function(){
+        //   $(".popup, .popup_bg").css({ display: "block" });
+        //   $("body").css({"overflow-y":"hidden"});
 
-          $(".popup_img_en").css({"display":"block"});
-          $(".popup_img_ko").css({"display":"none"});
+        //   $(".popup_img_en").css({"display":"block"});
+        //   $(".popup_img_ko").css({"display":"none"});
 
-          $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
-        });
+        //   $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
+        // });
 
         $(window).resize(function(){
           var windowWidth = $( window ).width();

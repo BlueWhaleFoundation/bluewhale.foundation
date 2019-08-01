@@ -1,5 +1,4 @@
 //////////////////// ver 4.0 ///////////////////////
-console.log('basic start')
 
 // 스크롤 텍스트
 $(window).scroll(function() {
@@ -207,28 +206,33 @@ window.addEventListener("scroll", function() {
 });
 
 $(function() {
-  console.log('jquery start')
-  // $(".close").click(function() {
-  //   $(".popup").css({ display: "none" });
-  // });
+  $(".close").click(function() {
+    $(".popup").css({ display: "none" });
+  });
 
-  // $(".lang_kor").click(function(){
-  //   $(".popup").css({ display: "block" });
+  $(".lang_kor").click(function(){
+    console.log('lang_kor click')
+    $(".popup").css({ display: "block" });
 
-  //   $(".popup_img_en").css({"display":"none"});
-  //   $(".popup_img_ko").css({"display":"block"});
+    $(".popup_img_en").css({"display":"none"});
+    $(".popup_img_ko").css({"display":"block"});
 
-  //   $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
-  // });
+    $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
+    
+    $(".main_txt_cell h2").addClass("kor_font");
+  });
 
-  // $(".lang_eng").click(function(){
-  //   $(".popup").css({ display: "block" });
+  $(".lang_eng").click(function(){
+    console.log('lang_eng click')
+    $(".popup").css({ display: "block" });
 
-  //   $(".popup_img_en").css({"display":"block"});
-  //   $(".popup_img_ko").css({"display":"none"});
+    $(".popup_img_en").css({"display":"block"});
+    $(".popup_img_ko").css({"display":"none"});
 
-  //   $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
-  // });
+    $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
+
+    $(".main_txt_cell h2").removeClass("kor_font");
+  });
 
   // 모바일 gnb 클릭이벤트
 
@@ -249,12 +253,12 @@ $(function() {
   });
 
   // 영문 한글 변환시 메인 타이틀 폰트변경
-  $(".lang_kor").click(function() {
-    $(".main_txt_cell h2").addClass("kor_font");
-  });
-  $(".lang_eng").click(function() {
-    $(".main_txt_cell h2").removeClass("kor_font");
-  });
+  // $(".lang_kor").click(function() {
+  //   $(".main_txt_cell h2").addClass("kor_font");
+  // });
+  // $(".lang_eng").click(function() {
+  //   $(".main_txt_cell h2").removeClass("kor_font");
+  // });
 
   // 메뉴 클릭시 부드럽게.
   $(".gnb_menu li a").click(function() {
