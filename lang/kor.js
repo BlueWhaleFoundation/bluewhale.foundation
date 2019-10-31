@@ -80,7 +80,7 @@ export const kor = {
 
   // section 10
   sec10_tit: "최신 뉴스",
-  sec10_news_okex: "블루웨일 BWX, 글로벌 메이저 거래소 OKEx 상장",
+  sec10_news_un: "블루웨일 이원홍 대표, UN 개최 “인천 법률 및 비즈니스 포럼” 연설 현장",
   sec10_news_rotary:
     "블루웨일-국제로타리 필란트로피 이니셔티브 구축과 iHub 조성 및 활용 위한 업무협약 체결",
   sec10_news_ez: "블루웨일, 리워드형 게임 평가앱 ‘이지 리워드(EZ Reward)’ 런칭",
