@@ -217,7 +217,6 @@ $(function() {
     $(".popup_img_en").css({"display":"none"});
     $(".popup_img_ko").css({"display":"block"});
 
-    $(".news_okex a").attr("href", "http://bit.ly/32MXlPW");
     $("un_link").attr("href", "https://youtu.be/80e2KVZ6b4Q");
     
     $(".main_txt_cell h2").addClass("kor_font");
@@ -230,7 +229,6 @@ $(function() {
     $(".popup_img_en").css({"display":"block"});
     $(".popup_img_ko").css({"display":"none"});
 
-    $(".news_okex a").attr("href", "http://bit.ly/30Mbrz4");
     $("un_link").attr("href", "https://www.facebook.com/424120634710784/posts/758441957945315?sfns=mo");
 
     $(".main_txt_cell h2").removeClass("kor_font");
